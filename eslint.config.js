@@ -1,8 +1,15 @@
 "use strict";
 
+// @ts-expect-error -- TODO: Update plugin version to fix
 const js = require("@eslint/js");
+
+// @ts-expect-error -- TODO: Update plugin version to fix
 const { FlatCompat } = require("@eslint/eslintrc");
+
+// @ts-expect-error -- TODO: Update plugin version to fix
 const eslintPluginEslintPluginAll = require("eslint-plugin-eslint-plugin/configs/all");
+
+// @ts-expect-error -- TODO: Update plugin version to fix
 const eslintPluginMarkdown = require("eslint-plugin-markdown");
 const globals = require("globals");
 
@@ -24,6 +31,8 @@ module.exports = [
     // Apply mocha config only to tests.
     ...compat
         .extends("plugin:mocha/recommended")
+
+        // @ts-expect-error -- TODO: Update plugin version to fix
         .map((config) => ({ ...config, files: ["tests/**/*.js"] })),
 
     {
@@ -43,21 +52,6 @@ module.exports = [
             eqeqeq: "error",
             "func-style": ["error", "declaration"],
             "guard-for-in": "error",
-            "lines-around-comment": [
-                "error",
-                {
-                    beforeBlockComment: false,
-                    afterBlockComment: false,
-                    beforeLineComment: true,
-                    afterLineComment: false,
-                    allowBlockStart: true,
-                    allowBlockEnd: true,
-                    allowObjectStart: true,
-                    allowObjectEnd: true,
-                    allowArrayStart: true,
-                    allowArrayEnd: true,
-                },
-            ],
             "max-depth": ["error", 5],
             "new-cap": ["error", { newIsCap: true, capIsNew: true }],
             "no-array-constructor": "error",
@@ -113,7 +107,6 @@ module.exports = [
             "no-throw-literal": "error",
             "no-trailing-spaces": "error",
             "no-undef": "error",
-            "no-undefined": "error",
             "no-underscore-dangle": "error",
             "no-unexpected-multiline": "error",
             "no-unmodified-loop-condition": "error",
@@ -137,14 +130,6 @@ module.exports = [
             "spaced-comment": ["error", "always", { exceptions: ["-"] }],
             strict: ["error", "global"],
             "use-isnan": "error",
-            "valid-jsdoc": [
-                "error",
-                {
-                    prefer: {
-                        return: "returns",
-                    },
-                },
-            ],
             "valid-typeof": "error",
             yoda: ["error", "never"],
 

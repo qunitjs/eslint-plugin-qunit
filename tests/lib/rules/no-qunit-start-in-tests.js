@@ -15,6 +15,10 @@ const rule = require("../../../lib/rules/no-qunit-start-in-tests"),
 // Helpers
 //------------------------------------------------------------------------------
 
+/**
+ * @param {string} context
+ * @returns {{messageId: string, data: Record<string, string>}}
+ */
 function createError(context) {
     return {
         messageId: "noQUnitStartInTests",

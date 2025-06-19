@@ -16,6 +16,10 @@ const rule = require("../../../lib/rules/no-negated-ok"),
 // Helper functions
 //------------------------------------------------------------------------------
 
+/**
+ * @param {string} callee
+ * @returns {{messageId: string, data: Record<string, string>}}
+ */
 function createError(callee) {
     return {
         messageId: "noNegationInOk",

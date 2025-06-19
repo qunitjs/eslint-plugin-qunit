@@ -15,6 +15,11 @@ const rule = require("../../../lib/rules/resolve-async"),
 // Helpers
 //------------------------------------------------------------------------------
 
+/**
+ * @param {string} nodeType
+ * @param {number} numberOfCalls
+ * @returns {{messageId: string, data: {[]: string}, type: string}}
+ */
 function createNeedStartCallsMessage(nodeType, numberOfCalls = 1) {
     const semaphore = numberOfCalls;
     const callOrCalls = semaphore === 1 ? "call" : "calls";
@@ -29,6 +34,11 @@ function createNeedStartCallsMessage(nodeType, numberOfCalls = 1) {
     };
 }
 
+/**
+ * @param {string} nodeType
+ * @param {string=} callbackVar
+ * @returns {{messageId: string, data: {[]: string}, type: string}}
+ */
 function createAsyncCallbackNotCalledMessage(nodeType, callbackVar) {
     return {
         messageId: "asyncCallbackNotCalled",

@@ -16,6 +16,10 @@ const rule = require("../../../lib/rules/no-compare-relation-boolean"),
 // Helper Functions
 //------------------------------------------------------------------------------
 
+/**
+ * @param {{code: string, output:string}} testCase
+ * @returns {{code: string, errors: {messageId: string, type: string}[]}}
+ */
 function addErrors(testCase) {
     return Object.assign(
         {

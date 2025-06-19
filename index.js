@@ -8,6 +8,8 @@
 "use strict";
 
 const requireIndex = require("requireindex");
+
+// @ts-expect-error -- ESM/TypeScript conversion should fix this.
 const pkg = require("./package.json");
 
 module.exports = {

@@ -6,7 +6,7 @@
 
 const rule = require("../../../lib/rules/no-identical-names"),
     RuleTester = require("eslint").RuleTester,
-    outdent = require("outdent");
+    { outdent } = require("outdent");
 
 //------------------------------------------------------------------------------
 // Tests
@@ -14,7 +14,7 @@ const rule = require("../../../lib/rules/no-identical-names"),
 
 const ruleTester = new RuleTester();
 
-ruleTester.run("no-identical-title", rule, {
+ruleTester.run("no-identical-names", rule, {
     valid: [
         outdent`
           module("module");

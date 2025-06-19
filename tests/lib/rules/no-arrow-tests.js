@@ -12,7 +12,7 @@
 
 const rule = require("../../../lib/rules/no-arrow-tests"),
     RuleTester = require("eslint").RuleTester,
-    outdent = require("outdent");
+    { outdent } = require("outdent");
 
 //------------------------------------------------------------------------------
 // Tests
