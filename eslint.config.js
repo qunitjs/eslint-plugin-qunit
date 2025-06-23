@@ -121,7 +121,6 @@ module.exports = [
             "no-useless-escape": "error",
             "no-useless-return": "error",
             "no-var": "error",
-            "no-warning-comments": "error",
             "no-with": "error",
             "operator-assignment": ["error", "always"],
             "prefer-const": "error",
@@ -146,6 +145,9 @@ module.exports = [
                     "replacedBy",
                 ],
             ],
+            "eslint-plugin/no-meta-schema-default": "off", // TODO: enable this.
+            "eslint-plugin/require-meta-default-options": "off", // TODO: enable this.
+            "eslint-plugin/require-meta-docs-recommended": "off", // We're not currently using this property.
             "eslint-plugin/require-meta-docs-url": [
                 "error",
                 {
@@ -153,6 +155,7 @@ module.exports = [
                         "https://github.com/platinumazure/eslint-plugin-qunit/blob/main/docs/rules/{{name}}.md",
                 },
             ],
+            "eslint-plugin/require-meta-schema-description": "off", // TODO: enable this.
 
             // eslint-plugin-node
             "node/no-missing-require": [
@@ -176,7 +179,6 @@ module.exports = [
             "unicorn/filename-case": "off",
             "unicorn/no-array-reduce": "off",
             "unicorn/no-null": "off",
-            // eslint-disable-next-line no-warning-comments
             "unicorn/prefer-at": "off", // TODO: enable once we raise Node requirement to v16.6.0
             "unicorn/prefer-module": "off",
             "unicorn/prevent-abbreviations": "off",
