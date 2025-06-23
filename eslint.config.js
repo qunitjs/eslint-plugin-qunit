@@ -1,30 +1,28 @@
 "use strict";
 
 const js = require("@eslint/js");
-const { FlatCompat } = require("@eslint/eslintrc");
+const eslintPluginEslintComments = require("@eslint-community/eslint-plugin-eslint-comments/configs");
 const eslintPluginEslintPluginAll = require("eslint-plugin-eslint-plugin/configs/all");
 const eslintPluginMarkdown = require("eslint-plugin-markdown");
+const eslintPluginMocha = require("eslint-plugin-mocha");
+const eslintPluginN = require("eslint-plugin-n");
+const eslintPluginPrettierRecommended = require("eslint-plugin-prettier/recommended");
+const eslintPluginUnicorn = require("eslint-plugin-unicorn");
 const globals = require("globals");
 
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-});
-
 module.exports = [
-    ...compat.extends(
-        "plugin:eslint-comments/recommended",
-        "plugin:node/recommended",
-        "plugin:prettier/recommended",
-        "plugin:unicorn/recommended",
-    ),
+    js.configs.recommended,
 
+    eslintPluginEslintComments.recommended,
     eslintPluginEslintPluginAll,
+    eslintPluginN.configs["flat/recommended"],
+    eslintPluginPrettierRecommended,
+    eslintPluginUnicorn.configs["flat/recommended"],
 
-    // Apply mocha config only to tests.
-    ...compat
-        .extends("plugin:mocha/recommended")
-        .map((config) => ({ ...config, files: ["tests/**/*.js"] })),
+    {
+        ...eslintPluginMocha.configs.flat.recommended,
+        files: ["tests/**/*.js"],
+    },
 
     {
         languageOptions: {
@@ -136,14 +134,6 @@ module.exports = [
             "spaced-comment": ["error", "always", { exceptions: ["-"] }],
             strict: ["error", "global"],
             "use-isnan": "error",
-            "valid-jsdoc": [
-                "error",
-                {
-                    prefer: {
-                        return: "returns",
-                    },
-                },
-            ],
             "valid-typeof": "error",
             yoda: ["error", "never"],
 
@@ -172,8 +162,8 @@ module.exports = [
             ],
             "eslint-plugin/require-meta-schema-description": "off", // TODO: enable this.
 
-            // eslint-plugin-node
-            "node/no-missing-require": [
+            // eslint-plugin-n
+            "n/no-missing-require": [
                 "error",
                 {
                     allowModules: ["@typescript-eslint/parser"],

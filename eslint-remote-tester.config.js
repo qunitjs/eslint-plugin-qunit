@@ -1,7 +1,6 @@
 "use strict";
 
-const fs = require("node:fs");
-const { basename, extname } = require("node:path");
+const eslintPluginQunitRecommended = require("./lib/configs/recommended");
 
 /** @type {import('eslint-remote-tester').Config} */
 module.exports = {
@@ -33,25 +32,7 @@ module.exports = {
     cache: false,
 
     /** ESLint configuration */
-    eslintrc: {
-        plugins: ["qunit"],
-
-        // Enable all of our rules.
-        rules: Object.fromEntries(
-            fs
-                .readdirSync(`${__dirname}/lib/rules`)
-                .map(
-                    (filename) =>
-                        `qunit/${basename(filename, extname(filename))}`,
-                )
-                .map((ruleName) => [ruleName, "error"]),
-        ),
-
-        overrides: [
-            {
-                files: ["*.ts", "*.mts", "*.cts"],
-                parser: "@typescript-eslint/parser",
-            },
-        ],
+    eslintConfig: {
+        ...eslintPluginQunitRecommended,
     },
 };
