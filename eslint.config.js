@@ -1,9 +1,7 @@
 "use strict";
 
-// @ts-expect-error -- TODO: Update plugin version to fix
 const js = require("@eslint/js");
 
-// @ts-expect-error -- TODO: Update plugin version to fix
 const { FlatCompat } = require("@eslint/eslintrc");
 
 // @ts-expect-error -- TODO: Update plugin version to fix
@@ -31,8 +29,6 @@ module.exports = [
     // Apply mocha config only to tests.
     ...compat
         .extends("plugin:mocha/recommended")
-
-        // @ts-expect-error -- TODO: Update plugin version to fix
         .map((config) => ({ ...config, files: ["tests/**/*.js"] })),
 
     {
