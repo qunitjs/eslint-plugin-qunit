@@ -29,14 +29,14 @@ ruleTester.run("no-global-module-test", rule, {
         // Global overridden by local import/declaration.
         {
             code: "var module = require('foo'); module();",
-            globals: { module: true },
+            languageOptions: { globals: { module: true } },
         },
     ],
 
     invalid: [
         {
             code: "module();",
-            globals: { module: true },
+            languageOptions: { globals: { module: true } },
             errors: [
                 {
                     messageId: "unexpectedGlobalModuleTest",
@@ -49,7 +49,7 @@ ruleTester.run("no-global-module-test", rule, {
         },
         {
             code: "test();",
-            globals: { test: true },
+            languageOptions: { globals: { test: true } },
             errors: [
                 {
                     messageId: "unexpectedGlobalModuleTest",
@@ -62,7 +62,7 @@ ruleTester.run("no-global-module-test", rule, {
         },
         {
             code: "asyncTest();",
-            globals: { asyncTest: true },
+            languageOptions: { globals: { asyncTest: true } },
             errors: [
                 {
                     messageId: "unexpectedGlobalModuleTest",

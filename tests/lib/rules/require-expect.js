@@ -16,7 +16,7 @@ const rule = require("../../../lib/rules/require-expect"),
 // Tests
 //------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 2015 } }),
+const ruleTester = new RuleTester(),
     returnAndIndent = "\n        ";
 
 function alwaysErrorMessage(expectCallName) {
@@ -65,7 +65,7 @@ ruleTester.run("require-expect", rule, {
             // TypeScript: test callback is adding a type to `this`
             code: "test('name', function(this: LocalTestContext) { expect(0) });",
             options: [], // Defaults to never-except-zero
-            parser: require.resolve("@typescript-eslint/parser"),
+            languageOptions: { parser: require("@typescript-eslint/parser") },
         },
 
         // CallExpression without parent object throws no errors
@@ -176,14 +176,13 @@ ruleTester.run("require-expect", rule, {
         {
             code: "test('name', (assert) => { other.assert.expect(0) });",
             options: ["always"],
-            parserOptions: { ecmaVersion: 6 },
             errors: [alwaysErrorMessage("assert.expect")],
         },
         {
             // TypeScript: test callback is adding a type to `this`
             code: "test('name', function(this: LocalTestContext, assert) { other.assert.expect(0) });",
             options: ["always"],
-            parser: require.resolve("@typescript-eslint/parser"),
+            languageOptions: { parser: require("@typescript-eslint/parser") },
             errors: [alwaysErrorMessage("assert.expect")],
         },
 

@@ -197,11 +197,6 @@ module.exports = [
     {
         // Markdown code samples.
         files: ["**/*.md/*.js", "**/*.md/*.javascript"],
-        languageOptions: {
-            parserOptions: {
-                sourceType: "module",
-            },
-        },
         rules: {
             eqeqeq: "off",
             "guard-for-in": "off",

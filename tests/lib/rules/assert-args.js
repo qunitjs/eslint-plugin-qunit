@@ -257,7 +257,7 @@ ruleTester.run("assert-args", rule, {
         {
             // TypeScript: test callback is adding a type to `this`
             code: "QUnit.test('test', (this: LocalTestContext, assert) => { assert.ok(); });",
-            parser: require.resolve("@typescript-eslint/parser"),
+            languageOptions: { parser: require("@typescript-eslint/parser") },
             errors: [
                 {
                     messageId: "unexpectedArgCountNoMessage",
@@ -482,7 +482,6 @@ ruleTester.run("assert-args", rule, {
         },
         {
             code: testUtils.wrapInArrowTest("assert.strictEqual();"),
-            parserOptions: { ecmaVersion: 6 },
             errors: [
                 {
                     messageId: "unexpectedArgCountNoMessage",

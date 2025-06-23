@@ -30,7 +30,7 @@ function createError({ invokedMethodName, usedHooksIdentifierName }) {
 // Tests
 //------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: "latest" } });
+const ruleTester = new RuleTester();
 ruleTester.run("no-hooks-from-ancestor-modules", rule, {
     valid: [
         "QUnit.testDone(function() {});",
@@ -131,7 +131,7 @@ ruleTester.run("no-hooks-from-ancestor-modules", rule, {
         {
             // TypeScript: module callback is adding a type to `this`
             code: 'QUnit.module("module", function(this: LocalTestContext, hooks) { hooks.afterEach(function() {}); });',
-            parser: require.resolve("@typescript-eslint/parser"),
+            languageOptions: { parser: require("@typescript-eslint/parser") },
         },
     ],
 
@@ -290,7 +290,7 @@ ruleTester.run("no-hooks-from-ancestor-modules", rule, {
                     });
                 });
             `,
-            parser: require.resolve("@typescript-eslint/parser"),
+            languageOptions: { parser: require("@typescript-eslint/parser") },
             errors: [
                 createError({
                     invokedMethodName: "afterEach",
