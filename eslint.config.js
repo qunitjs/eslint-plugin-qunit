@@ -1,10 +1,12 @@
 "use strict";
 
 const js = require("@eslint/js");
-const eslintPluginEslintComments = require("@eslint-community/eslint-plugin-eslint-comments/configs");
-const eslintPluginEslintPluginAll = require("eslint-plugin-eslint-plugin/configs/all");
 
-// @ts-expect-error -- TODO: Update plugin version to fix
+// @ts-expect-error -- TODO: no types yet
+const eslintPluginEslintComments = require("@eslint-community/eslint-plugin-eslint-comments/configs");
+
+// @ts-expect-error -- TODO: no types yet -- https://github.com/eslint-community/eslint-plugin-eslint-plugin/issues/310
+const eslintPluginEslintPluginAll = require("eslint-plugin-eslint-plugin/configs/all");
 const eslintPluginMarkdown = require("eslint-plugin-markdown");
 const eslintPluginMocha = require("eslint-plugin-mocha");
 const eslintPluginN = require("eslint-plugin-n");
