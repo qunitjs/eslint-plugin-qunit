@@ -81,15 +81,10 @@ ruleTester.run("no-identical-title", rule, {
             test("it2", function() {});
           });
         `,
-        {
-            code: outdent`
-              test(\`it$\{n\}\`, function() {});
-              test(\`it$\{n\}\`, function() {});
-            `,
-            parserOptions: {
-                ecmaVersion: 6,
-            },
-        },
+        outdent`
+          test(\`it$\{n\}\`, function() {});
+          test(\`it$\{n\}\`, function() {});
+        `,
 
         // Tests with identical names are allowed if they are in different modules.
         outdent`

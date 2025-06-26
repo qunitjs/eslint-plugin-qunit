@@ -51,7 +51,7 @@ ruleTester.run("no-global-assertions", rule, {
         // Global overridden by local import/declaration.
         {
             code: "var strictEqual = require('foo'); strictEqual();",
-            globals: { strictEqual: true },
+            languageOptions: { globals: { strictEqual: true } },
         },
 
         // Intentionally not covered by this rule
@@ -61,57 +61,57 @@ ruleTester.run("no-global-assertions", rule, {
     invalid: [
         {
             code: testUtils.wrapInTest("ok(true);"),
-            globals: { ok: true },
+            languageOptions: { globals: { ok: true } },
             errors: [createError("ok")],
         },
         {
             code: testUtils.wrapInTest("equal(a, b);"),
-            globals: { equal: true },
+            languageOptions: { globals: { equal: true } },
             errors: [createError("equal")],
         },
         {
             code: testUtils.wrapInTest("strictEqual(a, b);"),
-            globals: { strictEqual: true },
+            languageOptions: { globals: { strictEqual: true } },
             errors: [createError("strictEqual")],
         },
         {
             code: testUtils.wrapInTest("deepEqual(a, b);"),
-            globals: { deepEqual: true },
+            languageOptions: { globals: { deepEqual: true } },
             errors: [createError("deepEqual")],
         },
         {
             code: testUtils.wrapInTest("propEqual(a, b);"),
-            globals: { propEqual: true },
+            languageOptions: { globals: { propEqual: true } },
             errors: [createError("propEqual")],
         },
         {
             code: testUtils.wrapInTest("notEqual(a, b);"),
-            globals: { notEqual: true },
+            languageOptions: { globals: { notEqual: true } },
             errors: [createError("notEqual")],
         },
         {
             code: testUtils.wrapInTest("notStrictEqual(a, b);"),
-            globals: { notStrictEqual: true },
+            languageOptions: { globals: { notStrictEqual: true } },
             errors: [createError("notStrictEqual")],
         },
         {
             code: testUtils.wrapInTest("notDeepEqual(a, b);"),
-            globals: { notDeepEqual: true },
+            languageOptions: { globals: { notDeepEqual: true } },
             errors: [createError("notDeepEqual")],
         },
         {
             code: testUtils.wrapInTest("notPropEqual(a, b);"),
-            globals: { notPropEqual: true },
+            languageOptions: { globals: { notPropEqual: true } },
             errors: [createError("notPropEqual")],
         },
         {
             code: testUtils.wrapInTest("raises(function () {}, TypeError);"),
-            globals: { raises: true },
+            languageOptions: { globals: { raises: true } },
             errors: [createError("raises")],
         },
         {
             code: testUtils.wrapInTest("throws(function () {}, TypeError);"),
-            globals: { throws: true },
+            languageOptions: { globals: { throws: true } },
             errors: [createError("throws")],
         },
     ],
