@@ -1,9 +1,8 @@
-"use strict";
 
-const eslintPluginQunitRecommended = require("./lib/configs/recommended");
+import eslintPluginQunitRecommended from "./lib/configs/recommended.js";
 
 /** @type {import('eslint-remote-tester').Config} */
-module.exports = {
+const config = {
     /** Repositories to scan */
     repositories: [
         // A few dozen top repositories using QUnit or this plugin.
@@ -36,3 +35,5 @@ module.exports = {
         ...eslintPluginQunitRecommended,
     },
 };
+
+export default config;

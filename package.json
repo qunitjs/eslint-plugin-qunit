@@ -12,7 +12,7 @@
     "lint:docs": "markdownlint \"**/*.md\"",
     "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
     "lint:js": "eslint --cache --report-unused-disable-directives .",
-    "lint:remote": "eslint-remote-tester",
+    "lint:remote": "eslint-remote-tester --config eslint-remote-tester.config.mjs",
     "lint:types": "tsc --noEmit",
     "preversion": "npm test",
     "report-coverage-html": "nyc report --reporter=html --report-dir build/coverage",
