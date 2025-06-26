@@ -7,7 +7,9 @@
     "./configs/*": "./lib/configs/*.js"
   },
   "main": "./index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
+    "build": "tsc --project tsconfig.build.json",
     "lint": "npm-run-all --continue-on-error --aggregate-output --parallel lint:*",
     "lint:docs": "markdownlint \"**/*.md\"",
     "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
@@ -22,6 +24,7 @@
     "update:eslint-docs": "eslint-doc-generator --url-configs \"https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations\""
   },
   "files": [
+    "dist/index.d.ts",
     "index.js",
     "lib/"
   ],

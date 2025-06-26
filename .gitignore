@@ -6,3 +6,6 @@ npm-debug.log
 
 # eslint-remote-tester
 /eslint-remote-tester-results/
+
+# TypeScript output
+dist/
