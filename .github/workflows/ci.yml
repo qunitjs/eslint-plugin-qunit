@@ -16,7 +16,8 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu, windows ]
-        node-version: [16.x, 18.x, 20.x]
+        # TODO: We still support Node 16 but can't run ESLint v9 tests with it anymore.
+        node-version: [18.x, 20.x]
 
     steps:
     - uses: actions/checkout@v4
