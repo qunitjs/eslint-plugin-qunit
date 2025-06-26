@@ -18,9 +18,7 @@ const rule = require("../../../lib/rules/no-arrow-tests"),
 // Tests
 //------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({
-    parserOptions: { ecmaVersion: 2017 },
-});
+const ruleTester = new RuleTester();
 ruleTester.run("no-arrow-tests", rule, {
     valid: [
         // tests
@@ -70,7 +68,7 @@ ruleTester.run("no-arrow-tests", rule, {
             // TypeScript: test callback is adding a type to `this`
             code: "QUnit.test('test', (this: LocalTestContext, assert) => { assert.ok(true); });",
             output: "QUnit.test('test', function(this: LocalTestContext, assert) { assert.ok(true); });",
-            parser: require.resolve("@typescript-eslint/parser"),
+            languageOptions: { parser: require("@typescript-eslint/parser") },
             errors: [
                 {
                     messageId: "noArrowFunction",

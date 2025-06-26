@@ -51,7 +51,6 @@ ruleTester.run("no-assert-ok", rule, {
         },
         {
             code: "QUnit.test('Name', (assert) => { assert.ok(a); });",
-            parserOptions: { ecmaVersion: 6 },
             errors: [
                 {
                     messageId: "unexpectedLocalOkNotOk",

@@ -65,7 +65,6 @@ ruleTester.run("no-assert-equal-boolean", rule, {
         {
             code: "QUnit.test('Name', (assert) => { assert.equal(a, true); });",
             output: "QUnit.test('Name', (assert) => { assert.true(a); });",
-            parserOptions: { ecmaVersion: 6 },
             errors: [{ messageId: "useAssertTrueOrFalse" }],
         },
         {
@@ -154,7 +153,7 @@ ruleTester.run("no-assert-equal-boolean", rule, {
         {
             code: "QUnit.test('Name', function (this: LocalTestContext, assert) { assert.equal(a, true); });",
             output: "QUnit.test('Name', function (this: LocalTestContext, assert) { assert.true(a); });",
-            parser: require.resolve("@typescript-eslint/parser"),
+            languageOptions: { parser: require("@typescript-eslint/parser") },
             errors: [{ messageId: "useAssertTrueOrFalse" }],
         },
     ],

@@ -40,9 +40,12 @@ function createInvalid(assertionCode, invalidValue) {
 //------------------------------------------------------------------------------
 
 const ruleTester = new RuleTester({
-    parserOptions: {
-        ecmaVersion: 2020,
-        ecmaFeatures: { jsx: true },
+    languageOptions: {
+        parserOptions: {
+            ecmaFeatures: {
+                jsx: true,
+            },
+        },
     },
 });
 

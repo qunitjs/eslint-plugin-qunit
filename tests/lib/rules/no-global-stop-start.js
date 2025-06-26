@@ -26,14 +26,14 @@ ruleTester.run("no-global-stop-start", rule, {
         // Global overridden by local import/declaration.
         {
             code: "var start = require('foo'); start();",
-            globals: { start: true },
+            languageOptions: { globals: { start: true } },
         },
     ],
 
     invalid: [
         {
             code: "stop();",
-            globals: { stop: true },
+            languageOptions: { globals: { stop: true } },
             errors: [
                 {
                     messageId: "unexpectedGlobalStopStart",
@@ -46,7 +46,7 @@ ruleTester.run("no-global-stop-start", rule, {
         },
         {
             code: "start();",
-            globals: { start: true },
+            languageOptions: { globals: { start: true } },
             errors: [
                 {
                     messageId: "unexpectedGlobalStopStart",

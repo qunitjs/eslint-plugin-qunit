@@ -104,13 +104,12 @@ ruleTester.run("no-ok-equality", rule, {
             // TypeScript: test callback is adding a type to `this`
             code: "test('Name', function (this: LocalTestContext, assert) { assert.ok(x === 1); });",
             output: "test('Name', function (this: LocalTestContext, assert) { assert.strictEqual(x, 1); });",
-            parser: require.resolve("@typescript-eslint/parser"),
+            languageOptions: { parser: require("@typescript-eslint/parser") },
             errors: [createError("assert.ok", "assert.strictEqual", "x", "1")],
         },
         {
             code: "test('Name', (assert) => { assert.ok(x === 1); });",
             output: "test('Name', (assert) => { assert.strictEqual(x, 1); });",
-            parserOptions: { ecmaVersion: 6 },
             errors: [createError("assert.ok", "assert.strictEqual", "x", "1")],
         },
         {

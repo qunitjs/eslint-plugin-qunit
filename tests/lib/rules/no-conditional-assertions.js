@@ -36,7 +36,7 @@ function wrapInInvalidTestObject(code) {
 // Tests
 //------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 6 } });
+const ruleTester = new RuleTester();
 ruleTester.run("no-conditional-assertions", rule, {
     valid: [
         ...[
