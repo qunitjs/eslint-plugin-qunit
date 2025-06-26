@@ -198,7 +198,7 @@ module.exports = [
         },
     },
     {
-        files: ["eslint-remote-tester.config.mjs"],
+        files: ["**/*.mjs"],
         languageOptions: {
             sourceType: "module",
         },
