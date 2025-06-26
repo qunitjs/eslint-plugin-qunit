@@ -197,4 +197,10 @@ module.exports = [
             strict: "off",
         },
     },
+    {
+        files: ["eslint-remote-tester.config.mjs"],
+        languageOptions: {
+            sourceType: "module",
+        },
+    },
 ];

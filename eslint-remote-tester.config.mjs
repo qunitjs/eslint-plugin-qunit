@@ -1,4 +1,3 @@
-
 import eslintPluginQunitRecommended from "./lib/configs/recommended.js";
 
 /** @type {import('eslint-remote-tester').Config} */
