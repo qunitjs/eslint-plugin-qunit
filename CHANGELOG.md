@@ -1,5 +1,17 @@
 
 
+## [8.2.1](https://github.com/platinumazure/eslint-plugin-qunit/compare/v8.2.0...v8.2.1) (2025-06-27)
+
+
+### Bug Fixes
+
+* ensure release-it runs the build ([#586](https://github.com/platinumazure/eslint-plugin-qunit/issues/586)) ([feb677a](https://github.com/platinumazure/eslint-plugin-qunit/commit/feb677a6949c6db6530227a9006c886692b6b06e))
+
+
+### Documentation
+
+* remove follow-up items from changelog ([3121b23](https://github.com/platinumazure/eslint-plugin-qunit/commit/3121b231e0723f47f636271a69481c843b3aa682))
+
 ## [8.2.0](https://github.com/platinumazure/eslint-plugin-qunit/compare/v8.1.2...v8.2.0) (2025-06-27)
 
 
