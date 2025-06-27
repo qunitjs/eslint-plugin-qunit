@@ -8,12 +8,15 @@
 "use strict";
 
 const requireIndex = require("requireindex");
+const path = require("node:path");
 
-const pkg = __dirname.includes("/dist/")
-    ? // @ts-expect-error -- TODO: ESM/TypeScript conversion should fix this.
-      require("../package.json") // eslint-disable-line n/no-missing-require -- this is the path when this file is compiled to dist/
-    : // @ts-expect-error -- TODO: ESM/TypeScript conversion should fix this.
-      require("./package.json");
+const pathParts = __dirname.split(path.sep);
+const pkg =
+    pathParts[pathParts.length - 1] === "dist"
+        ? // @ts-expect-error -- TODO: ESM/TypeScript conversion should fix this.
+          require("../package.json") // eslint-disable-line n/no-missing-require -- this is the path when this file is compiled to dist/
+        : // @ts-expect-error -- TODO: ESM/TypeScript conversion should fix this.
+          require("./package.json");
 
 module.exports = {
     meta: {
