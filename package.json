@@ -115,6 +115,9 @@
     "github": {
       "release": true
     },
+    "hooks": {
+      "after:bump": "npm run build"
+    },
     "plugins": {
       "@release-it/conventional-changelog": {
         "preset": {
