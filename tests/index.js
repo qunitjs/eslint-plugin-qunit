@@ -13,7 +13,8 @@ const assert = require("chai").assert,
     fs = require("node:fs"),
     path = require("node:path"),
     requireIndex = require("requireindex"),
-    plugin = require("../index.js");
+    plugin = require("../index.js"),
+    recommendedFlatConfig = require("../lib/configs/recommended.js");
 
 //------------------------------------------------------------------------------
 // Tests
@@ -87,19 +88,39 @@ describe("index.js", function () {
         });
 
         describe("flat", function () {
-            // eslint-disable-next-line mocha/no-setup-in-describe -- rule doesn't like function calls like `Object.entries()`
-            for (const [configName, config] of Object.entries(
+            describe("load all flat configs via requireIndex", function () {
                 // eslint-disable-next-line mocha/no-setup-in-describe -- rule doesn't like function calls like `Object.entries()`
-                requireIndex(`${__dirname}/../lib/configs`),
-            )) {
-                describe(configName, function () {
-                    it("has the right plugins", function () {
-                        assert.deepStrictEqual(config.plugins, {
-                            qunit: plugin,
+                for (const [configName, config] of Object.entries(
+                    // eslint-disable-next-line mocha/no-setup-in-describe -- rule doesn't like function calls like `Object.entries()`
+                    requireIndex(`${__dirname}/../lib/configs`),
+                )) {
+                    describe(configName, function () {
+                        it("has the right plugins", function () {
+                            assert.deepStrictEqual(config.plugins, {
+                                qunit: plugin,
+                            });
                         });
                     });
+                }
+            });
+
+            describe("load via import to ensure the types work", function () {
+                describe("recommended", function () {
+                    it("has the right plugins", function () {
+                        assert.deepStrictEqual(
+                            recommendedFlatConfig.plugins.qunit,
+                            plugin,
+                        );
+                    });
+
+                    it("has the right rules", function () {
+                        assert.deepStrictEqual(
+                            recommendedFlatConfig.rules,
+                            plugin.configs.recommended.rules,
+                        );
+                    });
                 });
-            }
+            });
         });
     });
 });

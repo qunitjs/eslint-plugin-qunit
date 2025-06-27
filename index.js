@@ -8,6 +8,8 @@
 "use strict";
 
 const requireIndex = require("requireindex");
+
+// @ts-expect-error -- ESM/TypeScript conversion should fix this.
 const pkg = require("./package.json");
 
 module.exports = {
@@ -22,7 +24,7 @@ module.exports = {
     configs: {
         recommended: {
             plugins: ["qunit"],
-            rules: {
+            rules: /** @type {import('eslint').Linter.RulesRecord} */ ({
                 "qunit/assert-args": "error",
                 "qunit/literal-compare-order": "error",
                 "qunit/no-assert-equal": "error",
@@ -58,7 +60,7 @@ module.exports = {
                 "qunit/require-expect": "error",
                 "qunit/require-object-in-propequal": "error",
                 "qunit/resolve-async": "error",
-            },
+            }),
         },
     },
 };

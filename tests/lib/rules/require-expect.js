@@ -19,6 +19,10 @@ const rule = require("../../../lib/rules/require-expect"),
 const ruleTester = new RuleTester(),
     returnAndIndent = "\n        ";
 
+/**
+ * @param {string} expectCallName
+ * @returns {{messageId: string, data: Record<string, string>}}
+ */
 function alwaysErrorMessage(expectCallName) {
     return {
         messageId: "expectRequired",
@@ -28,6 +32,10 @@ function alwaysErrorMessage(expectCallName) {
     };
 }
 
+/**
+ * @param {string} expectCallName
+ * @returns {{messageId: string, data: Record<string, string>}}
+ */
 function exceptSimpleErrorMessage(expectCallName) {
     return {
         messageId: "expectRequiredComplexTest",
@@ -37,6 +45,10 @@ function exceptSimpleErrorMessage(expectCallName) {
     };
 }
 
+/**
+ * @param {string} expectCallName
+ * @returns {{messageId: string, data: Record<string, string>}}
+ */
 function neverErrorMessage(expectCallName) {
     return {
         messageId: "expectForbidden",

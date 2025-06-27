@@ -16,6 +16,11 @@ const rule = require("../../../lib/rules/require-object-in-propequal"),
 // Helpers
 //------------------------------------------------------------------------------
 
+/**
+ * @param {string} assertionCode
+ * @param {string} invalidValue
+ * @returns {{code: string, errors: {messageId: string, data: Record<string, string>}[]}}
+ */
 function createInvalid(assertionCode, invalidValue) {
     return {
         code: testUtils.wrapInTest(assertionCode),

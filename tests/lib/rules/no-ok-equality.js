@@ -15,6 +15,13 @@ const rule = require("../../../lib/rules/no-ok-equality"),
 // Helpers
 //------------------------------------------------------------------------------
 
+/**
+ * @param {string} assertion
+ * @param {string} suggestion
+ * @param {string} a
+ * @param {string} b
+ * @returns {{messageId: string, data: Record<string, string>}}
+ */
 function createError(assertion, suggestion, a, b) {
     return {
         messageId: "noEqualityCheckInOk",

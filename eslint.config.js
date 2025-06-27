@@ -1,7 +1,11 @@
 "use strict";
 
 const js = require("@eslint/js");
+
+// @ts-expect-error -- TODO: no types yet
 const eslintPluginEslintComments = require("@eslint-community/eslint-plugin-eslint-comments/configs");
+
+// @ts-expect-error -- TODO: no types yet -- https://github.com/eslint-community/eslint-plugin-eslint-plugin/issues/310
 const eslintPluginEslintPluginAll = require("eslint-plugin-eslint-plugin/configs/all");
 const eslintPluginMarkdown = require("eslint-plugin-markdown");
 const eslintPluginMocha = require("eslint-plugin-mocha");
@@ -41,21 +45,6 @@ module.exports = [
             eqeqeq: "error",
             "func-style": ["error", "declaration"],
             "guard-for-in": "error",
-            "lines-around-comment": [
-                "error",
-                {
-                    beforeBlockComment: false,
-                    afterBlockComment: false,
-                    beforeLineComment: true,
-                    afterLineComment: false,
-                    allowBlockStart: true,
-                    allowBlockEnd: true,
-                    allowObjectStart: true,
-                    allowObjectEnd: true,
-                    allowArrayStart: true,
-                    allowArrayEnd: true,
-                },
-            ],
             "max-depth": ["error", 5],
             "new-cap": ["error", { newIsCap: true, capIsNew: true }],
             "no-array-constructor": "error",
@@ -111,7 +100,6 @@ module.exports = [
             "no-throw-literal": "error",
             "no-trailing-spaces": "error",
             "no-undef": "error",
-            "no-undefined": "error",
             "no-underscore-dangle": "error",
             "no-unexpected-multiline": "error",
             "no-unmodified-loop-condition": "error",
@@ -207,6 +195,12 @@ module.exports = [
             "no-unused-vars": "off",
             "no-var": "off",
             strict: "off",
+        },
+    },
+    {
+        files: ["**/*.mjs"],
+        languageOptions: {
+            sourceType: "module",
         },
     },
 ];

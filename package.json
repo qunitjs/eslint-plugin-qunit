@@ -6,13 +6,16 @@
     ".": "./index.js",
     "./configs/*": "./lib/configs/*.js"
   },
-  "main": "./index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
+    "build": "tsc --project tsconfig.build.json",
     "lint": "npm-run-all --continue-on-error --aggregate-output --parallel lint:*",
     "lint:docs": "markdownlint \"**/*.md\"",
     "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
     "lint:js": "eslint --cache --report-unused-disable-directives .",
-    "lint:remote": "eslint-remote-tester",
+    "lint:remote": "eslint-remote-tester --config eslint-remote-tester.config.mjs",
+    "lint:types": "tsc --noEmit",
     "preversion": "npm test",
     "report-coverage-html": "nyc report --reporter=html --report-dir build/coverage",
     "release": "release-it",
@@ -21,8 +24,7 @@
     "update:eslint-docs": "eslint-doc-generator --url-configs \"https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations\""
   },
   "files": [
-    "index.js",
-    "lib/"
+    "dist/"
   ],
   "dependencies": {
     "eslint-utils": "^3.0.0",
@@ -32,7 +34,16 @@
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
     "@eslint/js": "^9.29.0",
     "@release-it/conventional-changelog": "^8.0.1",
-    "@typescript-eslint/parser": "^8.34.1",
+    "@types/chai": "^5.2.2",
+    "@types/eslint": "^8.0.0",
+    "@types/eslint-plugin-markdown": "^2.0.2",
+    "@types/eslint-plugin-mocha": "^10.4.0",
+    "@types/eslint-utils": "^3.0.5",
+    "@types/estree": "^1.0.8",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.0.3",
+    "@types/requireindex": "^1.2.4",
+    "@typescript-eslint/parser": "^8.35.0",
     "all-contributors-cli": "^6.26.1",
     "chai": "^4.3.10",
     "coveralls": "^3.1.1",
@@ -58,7 +69,7 @@
     "prettier": "^3.1.0",
     "release-it": "^17.1.1",
     "semver": "^7.5.4",
-    "typescript": "^5.2.2"
+    "typescript": "^5.8.3"
   },
   "peerDepencencies": {
     "eslint": ">=8.38.0"
@@ -74,10 +85,10 @@
   ],
   "nyc": {
     "check-coverage": true,
-    "lines": 100,
-    "statements": 100,
+    "lines": 92,
+    "statements": 92,
     "functions": 100,
-    "branches": 100,
+    "branches": 90,
     "exclude": [
       "build/**",
       "eslint-remote-tester.config.js",

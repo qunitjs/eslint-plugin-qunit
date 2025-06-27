@@ -16,6 +16,10 @@ const rule = require("../../../lib/rules/no-global-assertions"),
 // Helpers
 //------------------------------------------------------------------------------
 
+/**
+ * @param {string} assertion
+ * @returns {{messageId: string, data: Record<string, string>}}
+ */
 function createError(assertion) {
     return {
         messageId: "unexpectedGlobalAssertion",
