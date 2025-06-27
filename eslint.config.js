@@ -203,4 +203,7 @@ module.exports = [
             sourceType: "module",
         },
     },
+    {
+        ignores: ["dist/**/*"],
+    },
 ];
