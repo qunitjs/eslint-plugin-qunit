@@ -9,8 +9,11 @@
 
 const requireIndex = require("requireindex");
 
-// @ts-expect-error -- ESM/TypeScript conversion should fix this.
-const pkg = require("./package.json");
+const pkg = __dirname.includes("/dist/")
+    ? // @ts-expect-error -- TODO: ESM/TypeScript conversion should fix this.
+      require("../package.json") // eslint-disable-line n/no-missing-require -- this is the path when this file is compiled to dist/
+    : // @ts-expect-error -- TODO: ESM/TypeScript conversion should fix this.
+      require("./package.json");
 
 module.exports = {
     meta: {
