@@ -6,7 +6,7 @@
     ".": "./index.js",
     "./configs/*": "./lib/configs/*.js"
   },
-  "main": "./index.js",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
@@ -24,9 +24,7 @@
     "update:eslint-docs": "eslint-doc-generator --url-configs \"https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations\""
   },
   "files": [
-    "dist/index.d.ts",
-    "index.js",
-    "lib/"
+    "dist/"
   ],
   "dependencies": {
     "eslint-utils": "^3.0.0",
