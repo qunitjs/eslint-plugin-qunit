@@ -18,7 +18,7 @@ For more details on how to extend your configuration from a plugin configuration
 | ✅  | `recommended` | This configuration includes rules which I recommend to avoid QUnit runtime errors or incorrect behavior, some of which can be difficult to debug. Some of these rules also encourage best practices that help QUnit work better for you. For ESLint `.eslintrc.js` legacy config, extend from `"plugin:qunit/recommended"`. For ESLint `eslint.config.js` or `eslint.config.ts` flat config, load from `require('eslint-plugin-qunit/configs/recommended')`. |
 
 ```ts
-// eslint.config.js
+// eslint.config.ts
 import eslintPluginQunitRecommended from 'eslint-plugin-qunit/configs/recommended';
 
 export default [
