@@ -1,5 +1,12 @@
 
 
+## [8.2.2](https://github.com/platinumazure/eslint-plugin-qunit/compare/v8.2.1...v8.2.2) (2025-06-27)
+
+
+### Bug Fixes
+
+* loading package.json ([#587](https://github.com/platinumazure/eslint-plugin-qunit/issues/587)) ([301eed6](https://github.com/platinumazure/eslint-plugin-qunit/commit/301eed69102c3fe352eb84284691d403bbabffed))
+
 ## [8.2.1](https://github.com/platinumazure/eslint-plugin-qunit/compare/v8.2.0...v8.2.1) (2025-06-27)
 
 
