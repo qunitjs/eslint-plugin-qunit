@@ -8,15 +8,9 @@
 * add type-checking with jsdoc TypeScript types and publish types ([#571](https://github.com/platinumazure/eslint-plugin-qunit/issues/571)) ([d543a4b](https://github.com/platinumazure/eslint-plugin-qunit/commit/d543a4b8ffc6a839aaaaa59205b9a5b08d1e6758))
 
 
-### Bug Fixes
-
-* entrypoint ([#583](https://github.com/platinumazure/eslint-plugin-qunit/issues/583)) ([5d7a5e2](https://github.com/platinumazure/eslint-plugin-qunit/commit/5d7a5e24535aacb58c56fcc10d5c18fccd885cce))
-* package.json path ([#584](https://github.com/platinumazure/eslint-plugin-qunit/issues/584)) ([f470c11](https://github.com/platinumazure/eslint-plugin-qunit/commit/f470c118721dda93d4fb4ff459f0dff3f6be6072))
-
 
 ### Chores
 
-* eslint ignore dist/ ([#585](https://github.com/platinumazure/eslint-plugin-qunit/issues/585)) ([4412fd6](https://github.com/platinumazure/eslint-plugin-qunit/commit/4412fd6e4107b00d8e7085c911865fff4dd0c650))
 * fix violations of eslint-plugin-eslint-plugin v6 ([#572](https://github.com/platinumazure/eslint-plugin-qunit/issues/572)) ([6dffeb4](https://github.com/platinumazure/eslint-plugin-qunit/commit/6dffeb433f48a6e1836bcfef785ad19ac6e82d90))
 * upgrade to ESLint v9 ([#573](https://github.com/platinumazure/eslint-plugin-qunit/issues/573)) ([572305f](https://github.com/platinumazure/eslint-plugin-qunit/commit/572305fdc2a2b7bb21574609c7b4daedbaf20d4f))
 
