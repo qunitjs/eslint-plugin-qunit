@@ -91,6 +91,7 @@
     "branches": 90,
     "exclude": [
       "build/**",
+      "dist/**",
       "eslint-remote-tester.config.js",
       "eslint.config.js",
       "scripts/**",
