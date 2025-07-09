@@ -86,6 +86,8 @@ ruleTester.run("literal-compare-order", rule, {
 
         // avoid crash in BDD-style assertions
         "QUnit.test('Name', function() { expect(variable).to.equal('Literal'); });",
+
+        "QUnit.test('Name', function() { router.on('routerDidChange', () => {}); });",
     ],
     invalid: [
         // equal
