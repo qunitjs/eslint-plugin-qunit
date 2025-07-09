@@ -1,5 +1,17 @@
 
 
+## [8.2.3](https://github.com/platinumazure/eslint-plugin-qunit/compare/v8.2.2...v8.2.3) (2025-07-09)
+
+
+### Bug Fixes
+
+* false positive in literal-compare-order rule ([#601](https://github.com/platinumazure/eslint-plugin-qunit/issues/601)) ([546aff8](https://github.com/platinumazure/eslint-plugin-qunit/commit/546aff8b9b7e9e6e5e012d7148f3e83cfa7004e4))
+
+
+### Chores
+
+* ignore dist/ for nyc test coverage ([#602](https://github.com/platinumazure/eslint-plugin-qunit/issues/602)) ([d3eefe8](https://github.com/platinumazure/eslint-plugin-qunit/commit/d3eefe8ea2034e8f8d6ae481cbd4e3f96c6a5f50))
+
 ## [8.2.2](https://github.com/platinumazure/eslint-plugin-qunit/compare/v8.2.1...v8.2.2) (2025-06-27)
 
 
