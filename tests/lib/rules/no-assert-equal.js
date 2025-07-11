@@ -184,5 +184,30 @@ ruleTester.run("no-assert-equal", rule, {
                 },
             ],
         },
+        {
+            // assert.equal in module hooks
+            code: "QUnit.module('My module', { before: function (assert) { assert.equal(1, 1); } });",
+            parser: require.resolve("@typescript-eslint/parser"),
+            errors: [
+                {
+                    messageId: "unexpectedAssertEqual",
+                    data: { assertVar: "assert" },
+                    suggestions: [
+                        {
+                            messageId: "switchToDeepEqual",
+                            output: "QUnit.module('My module', { before: function (assert) { assert.deepEqual(1, 1); } });",
+                        },
+                        {
+                            messageId: "switchToPropEqual",
+                            output: "QUnit.module('My module', { before: function (assert) { assert.propEqual(1, 1); } });",
+                        },
+                        {
+                            messageId: "switchToStrictEqual",
+                            output: "QUnit.module('My module', { before: function (assert) { assert.strictEqual(1, 1); } });",
+                        },
+                    ],
+                },
+            ],
+        },
     ],
 });
