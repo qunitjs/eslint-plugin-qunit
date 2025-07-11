@@ -187,7 +187,6 @@ ruleTester.run("no-assert-equal", rule, {
         {
             // assert.equal in module hooks
             code: "QUnit.module('My module', { before: function (assert) { assert.equal(1, 1); } });",
-            parser: require.resolve("@typescript-eslint/parser"),
             errors: [
                 {
                     messageId: "unexpectedAssertEqual",
