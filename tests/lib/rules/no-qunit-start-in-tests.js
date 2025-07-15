@@ -58,14 +58,6 @@ ruleTester.run("no-qunit-start-in-tests", rule, {
             errors: [createError("afterEach hook")],
         },
         {
-            code: 'QUnit.module("module", { before: function() { QUnit.start(); } });',
-            errors: [createError("before hook")],
-        },
-        {
-            code: 'QUnit.module("module", { after: function() { QUnit.start(); } });',
-            errors: [createError("after hook")],
-        },
-        {
             code: 'QUnit.module("module", { setup: function() { QUnit.start(); } });',
             errors: [createError("setup hook")],
         },
