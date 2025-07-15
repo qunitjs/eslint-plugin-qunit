@@ -1,5 +1,12 @@
 
 
+## [8.2.4](https://github.com/platinumazure/eslint-plugin-qunit/compare/v8.2.3...v8.2.4) (2025-07-15)
+
+
+### Bug Fixes
+
+* Flag assert.equal in module hooks in `no-assert-equal` rule ([#570](https://github.com/platinumazure/eslint-plugin-qunit/issues/570)) ([01157b1](https://github.com/platinumazure/eslint-plugin-qunit/commit/01157b1ab4a505f4e734e4a55862dd1390894a20))
+
 ## [8.2.3](https://github.com/platinumazure/eslint-plugin-qunit/compare/v8.2.2...v8.2.3) (2025-07-09)
 
 
