@@ -131,6 +131,13 @@ ruleTester.run("no-hooks-from-ancestor-modules", rule, {
             });
         });
         `,
+        `
+        function foo(name) {
+            QUnit.module(name, function (hooks) {
+                hooks.beforeEach(function () {});
+            });
+        }
+        `,
 
         {
             // TypeScript: module callback is adding a type to `this`
@@ -298,6 +305,24 @@ ruleTester.run("no-hooks-from-ancestor-modules", rule, {
             errors: [
                 createError({
                     invokedMethodName: "afterEach",
+                    usedHooksIdentifierName: "hooks",
+                }),
+            ],
+        },
+
+        {
+            code: `
+                function foo(name) {
+                    QUnit.module(\`\${name} parent\`, function (hooks) {
+                        QUnit.module(name, function () {
+                            hooks.beforeEach(function () {});
+                        });
+                    });
+                }
+            `,
+            errors: [
+                createError({
+                    invokedMethodName: "beforeEach",
                     usedHooksIdentifierName: "hooks",
                 }),
             ],
