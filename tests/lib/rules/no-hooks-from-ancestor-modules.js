@@ -42,6 +42,21 @@ ruleTester.run("no-hooks-from-ancestor-modules", rule, {
         QUnit.module("module");
         `,
         `
+        QUnit.module(123);
+        `,
+        `
+        QUnit.module();
+        `,
+        `
+        QUnit.module(undefined);
+        `,
+        `
+        QUnit.module(null);
+        `,
+        `
+        QUnit.module(someVariable);
+        `,
+        `
         QUnit.module("module", function() { test("it1", function() {}); });
         `,
         `
@@ -130,6 +145,13 @@ ruleTester.run("no-hooks-from-ancestor-modules", rule, {
                 });
             });
         });
+        `,
+        `
+        function foo(name) {
+            QUnit.module(name, function (hooks) {
+                hooks.beforeEach(function () {});
+            });
+        }
         `,
 
         {
@@ -298,6 +320,24 @@ ruleTester.run("no-hooks-from-ancestor-modules", rule, {
             errors: [
                 createError({
                     invokedMethodName: "afterEach",
+                    usedHooksIdentifierName: "hooks",
+                }),
+            ],
+        },
+
+        {
+            code: `
+                function foo(name) {
+                    QUnit.module(\`\${name} parent\`, function (hooks) {
+                        QUnit.module(name, function () {
+                            hooks.beforeEach(function () {});
+                        });
+                    });
+                }
+            `,
+            errors: [
+                createError({
+                    invokedMethodName: "beforeEach",
                     usedHooksIdentifierName: "hooks",
                 }),
             ],
