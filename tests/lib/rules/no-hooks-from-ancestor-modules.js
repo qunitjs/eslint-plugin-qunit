@@ -42,6 +42,21 @@ ruleTester.run("no-hooks-from-ancestor-modules", rule, {
         QUnit.module("module");
         `,
         `
+        QUnit.module(123);
+        `,
+        `
+        QUnit.module();
+        `,
+        `
+        QUnit.module(undefined);
+        `,
+        `
+        QUnit.module(null);
+        `,
+        `
+        QUnit.module(someVariable);
+        `,
+        `
         QUnit.module("module", function() { test("it1", function() {}); });
         `,
         `
