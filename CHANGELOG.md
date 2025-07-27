@@ -1,5 +1,12 @@
 
 
+## [8.2.5](https://github.com/platinumazure/eslint-plugin-qunit/compare/v8.2.4...v8.2.5) (2025-07-27)
+
+
+### Bug Fixes
+
+* error in function contexts for `no-hooks-from-ancestor-modules` ([#615](https://github.com/platinumazure/eslint-plugin-qunit/issues/615)) ([3925e40](https://github.com/platinumazure/eslint-plugin-qunit/commit/3925e4015a145dfb40bed741cc54ebe52ebe4339))
+
 ## [8.2.4](https://github.com/platinumazure/eslint-plugin-qunit/compare/v8.2.3...v8.2.4) (2025-07-15)
 
 
