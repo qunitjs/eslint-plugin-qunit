@@ -4,9 +4,9 @@ const js = require("@eslint/js");
 
 // @ts-expect-error -- TODO: no types yet
 const eslintPluginEslintComments = require("@eslint-community/eslint-plugin-eslint-comments/configs");
-
-// @ts-expect-error -- TODO: no types yet -- https://github.com/eslint-community/eslint-plugin-eslint-plugin/issues/310
-const eslintPluginEslintPluginAll = require("eslint-plugin-eslint-plugin/configs/all");
+const {
+    default: eslintPluginEslintPlugin,
+} = require("eslint-plugin-eslint-plugin");
 const eslintPluginMarkdown = require("eslint-plugin-markdown");
 const eslintPluginMocha = require("eslint-plugin-mocha");
 const eslintPluginN = require("eslint-plugin-n");
@@ -18,7 +18,7 @@ module.exports = [
     js.configs.recommended,
 
     eslintPluginEslintComments.recommended,
-    eslintPluginEslintPluginAll,
+    eslintPluginEslintPlugin.configs.all,
     eslintPluginN.configs["flat/recommended"],
     eslintPluginPrettierRecommended,
     eslintPluginUnicorn.configs["flat/recommended"],
