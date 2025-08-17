@@ -9,11 +9,11 @@
 //------------------------------------------------------------------------------
 
 const assert = require("chai").assert,
-    { rules, configs } = require("../index"),
+    { rules, configs } = require("../lib/index"),
     fs = require("node:fs"),
     path = require("node:path"),
     requireIndex = require("requireindex"),
-    plugin = require("../index.js"),
+    plugin = require("../lib/index.js"),
     recommendedFlatConfig = require("../lib/configs/recommended.js");
 
 //------------------------------------------------------------------------------
