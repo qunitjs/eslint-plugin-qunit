@@ -45,7 +45,7 @@
     "@types/requireindex": "^1.2.4",
     "@typescript-eslint/parser": "^8.35.0",
     "all-contributors-cli": "^6.26.1",
-    "chai": "^4.3.10",
+    "chai": "^5.3.1",
     "coveralls": "^3.1.1",
     "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.5",
