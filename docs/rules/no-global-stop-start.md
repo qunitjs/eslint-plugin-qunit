@@ -1,6 +1,8 @@
-# Disallow global stop/start (`qunit/no-global-stop-start`)
+# qunit/no-global-stop-start
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
+
+📝 Disallow global stop/start.
 
 <!-- end auto-generated rule header -->
 

@@ -1,6 +1,8 @@
-# Disallow identical test and module names (`qunit/no-identical-names`)
+# qunit/no-identical-names
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
+
+📝 Disallow identical test and module names.
 
 <!-- end auto-generated rule header -->
 

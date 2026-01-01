@@ -1,6 +1,8 @@
-# Disallow use of QUnit.init (`qunit/no-init`)
+# qunit/no-init
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
+
+📝 Disallow use of QUnit.init.
 
 <!-- end auto-generated rule header -->
 

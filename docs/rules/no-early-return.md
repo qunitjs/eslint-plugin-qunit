@@ -1,6 +1,8 @@
-# Disallow early return in tests (`qunit/no-early-return`)
+# qunit/no-early-return
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
+
+📝 Disallow early return in tests.
 
 <!-- end auto-generated rule header -->
 

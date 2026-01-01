@@ -1,6 +1,8 @@
-# Disallow async calls in loops (`qunit/no-async-in-loops`)
+# qunit/no-async-in-loops
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
+
+📝 Disallow async calls in loops.
 
 <!-- end auto-generated rule header -->
 

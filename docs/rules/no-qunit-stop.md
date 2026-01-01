@@ -1,6 +1,8 @@
-# Disallow QUnit.stop (`qunit/no-qunit-stop`)
+# qunit/no-qunit-stop
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
+
+📝 Disallow QUnit.stop.
 
 <!-- end auto-generated rule header -->
 

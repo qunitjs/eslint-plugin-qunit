@@ -1,6 +1,8 @@
-# Disallow QUnit.push (`qunit/no-qunit-push`)
+# qunit/no-qunit-push
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
+
+📝 Disallow QUnit.push.
 
 <!-- end auto-generated rule header -->
 

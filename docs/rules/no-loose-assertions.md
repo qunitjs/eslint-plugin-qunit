@@ -1,4 +1,6 @@
-# Disallow the use of assert.equal/assert.ok/assert.notEqual/assert.notOk (`qunit/no-loose-assertions`)
+# qunit/no-loose-assertions
+
+📝 Disallow the use of assert.equal/assert.ok/assert.notEqual/assert.notOk.
 
 <!-- end auto-generated rule header -->
 

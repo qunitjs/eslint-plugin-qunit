@@ -1,6 +1,8 @@
-# Disallow assertions within if statements or conditional expressions (`qunit/no-conditional-assertions`)
+# qunit/no-conditional-assertions
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
+
+📝 Disallow assertions within if statements or conditional expressions.
 
 <!-- end auto-generated rule header -->
 

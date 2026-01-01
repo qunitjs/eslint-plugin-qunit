@@ -1,6 +1,8 @@
-# Disallow the expect argument in QUnit.test (`qunit/no-test-expect-argument`)
+# qunit/no-test-expect-argument
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
+
+📝 Disallow the expect argument in QUnit.test.
 
 <!-- end auto-generated rule header -->
 

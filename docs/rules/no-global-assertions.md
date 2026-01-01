@@ -1,6 +1,8 @@
-# Disallow global QUnit assertions (`qunit/no-global-assertions`)
+# qunit/no-global-assertions
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
+
+📝 Disallow global QUnit assertions.
 
 <!-- end auto-generated rule header -->
 

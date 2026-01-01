@@ -1,6 +1,8 @@
-# Enforce use of objects as expected value in `assert.propEqual` (`qunit/require-object-in-propequal`)
+# qunit/require-object-in-propequal
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
+
+📝 Enforce use of objects as expected value in `assert.propEqual`.
 
 <!-- end auto-generated rule header -->
 

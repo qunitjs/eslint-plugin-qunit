@@ -1,6 +1,8 @@
-# Disallow arrow functions as QUnit test/module callbacks (`qunit/no-arrow-tests`)
+# qunit/no-arrow-tests
 
 🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
+
+📝 Disallow arrow functions as QUnit test/module callbacks.
 
 <!-- end auto-generated rule header -->
 
