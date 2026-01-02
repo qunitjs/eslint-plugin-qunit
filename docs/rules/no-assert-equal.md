@@ -1,10 +1,10 @@
 # qunit/no-assert-equal
 
+📝 Disallow the use of assert.equal.
+
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 
 💡 This rule is manually fixable by [editor suggestions](https://eslint.org/docs/latest/use/core-concepts#rule-suggestions).
-
-📝 Disallow the use of assert.equal.
 
 <!-- end auto-generated rule header -->
 
