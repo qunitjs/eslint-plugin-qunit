@@ -17,7 +17,7 @@ const rule = require("../../../lib/rules/no-hooks-from-ancestor-modules"),
 
 /**
  * @param {{ invokedMethodName: string, usedHooksIdentifierName: string }} params
- * @returns {{messageId: string, data: Record<string, string>, type: string}}
+ * @returns {{messageId: string, data: Record<string, string>}}
  */
 function createError({ invokedMethodName, usedHooksIdentifierName }) {
     return {

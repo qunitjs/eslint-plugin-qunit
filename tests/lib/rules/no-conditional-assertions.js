@@ -18,7 +18,7 @@ const rule = require("../../../lib/rules/no-conditional-assertions"),
 
 /**
  * @param {string} code
- * @returns {{code: string, errors: {messageId: string, type: string}[]}}
+ * @returns {{code: string, errors: {messageId: string}[]}}
  */
 function wrapInInvalidTestObject(code) {
     return {
