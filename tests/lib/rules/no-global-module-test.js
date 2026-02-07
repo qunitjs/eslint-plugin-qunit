@@ -43,7 +43,6 @@ ruleTester.run("no-global-module-test", rule, {
                     data: {
                         callee: "module",
                     },
-                    type: "CallExpression",
                 },
             ],
         },
@@ -56,7 +55,6 @@ ruleTester.run("no-global-module-test", rule, {
                     data: {
                         callee: "test",
                     },
-                    type: "CallExpression",
                 },
             ],
         },
@@ -69,7 +67,6 @@ ruleTester.run("no-global-module-test", rule, {
                     data: {
                         callee: "asyncTest",
                     },
-                    type: "CallExpression",
                 },
             ],
         },

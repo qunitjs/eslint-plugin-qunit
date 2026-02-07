@@ -33,7 +33,6 @@ ruleTester.run("no-reset", rule, {
             errors: [
                 {
                     messageId: "noReset",
-                    type: "CallExpression",
                 },
             ],
         },

@@ -64,7 +64,6 @@ ruleTester.run("no-global-expect", rule, {
             errors: [
                 {
                     messageId: "unexpectedGlobalExpect",
-                    type: "CallExpression",
                 },
             ],
         },

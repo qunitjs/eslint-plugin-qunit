@@ -40,7 +40,6 @@ ruleTester.run("no-global-stop-start", rule, {
                     data: {
                         callee: "stop",
                     },
-                    type: "CallExpression",
                 },
             ],
         },
@@ -53,7 +52,6 @@ ruleTester.run("no-global-stop-start", rule, {
                     data: {
                         callee: "start",
                     },
-                    type: "CallExpression",
                 },
             ],
         },

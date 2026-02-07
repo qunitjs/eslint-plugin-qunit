@@ -46,7 +46,6 @@ ruleTester.run("no-test-expect-argument", rule, {
                     data: {
                         callee: "test",
                     },
-                    type: "CallExpression",
                 },
             ],
         },
@@ -58,7 +57,6 @@ ruleTester.run("no-test-expect-argument", rule, {
                     data: {
                         callee: "QUnit.test",
                     },
-                    type: "CallExpression",
                 },
             ],
         },
@@ -70,7 +68,6 @@ ruleTester.run("no-test-expect-argument", rule, {
                     data: {
                         callee: "asyncTest",
                     },
-                    type: "CallExpression",
                 },
             ],
         },
@@ -82,7 +79,6 @@ ruleTester.run("no-test-expect-argument", rule, {
                     data: {
                         callee: "QUnit.asyncTest",
                     },
-                    type: "CallExpression",
                 },
             ],
         },

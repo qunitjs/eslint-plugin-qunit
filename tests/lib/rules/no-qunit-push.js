@@ -27,7 +27,6 @@ ruleTester.run("no-qunit-push", rule, {
             errors: [
                 {
                     messageId: "noQUnitPush",
-                    type: "CallExpression",
                 },
             ],
         },

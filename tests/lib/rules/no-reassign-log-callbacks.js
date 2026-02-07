@@ -38,7 +38,6 @@ ruleTester.run("no-reassign-log-callbacks", rule, {
             errors: [
                 {
                     messageId: "noReassignLogCallbacks",
-                    type: "AssignmentExpression",
                 },
             ],
         },
@@ -47,7 +46,6 @@ ruleTester.run("no-reassign-log-callbacks", rule, {
             errors: [
                 {
                     messageId: "noReassignLogCallbacks",
-                    type: "AssignmentExpression",
                 },
             ],
         },
@@ -56,7 +54,6 @@ ruleTester.run("no-reassign-log-callbacks", rule, {
             errors: [
                 {
                     messageId: "noReassignLogCallbacks",
-                    type: "AssignmentExpression",
                 },
             ],
         },
@@ -65,7 +62,6 @@ ruleTester.run("no-reassign-log-callbacks", rule, {
             errors: [
                 {
                     messageId: "noReassignLogCallbacks",
-                    type: "AssignmentExpression",
                 },
             ],
         },
@@ -74,7 +70,6 @@ ruleTester.run("no-reassign-log-callbacks", rule, {
             errors: [
                 {
                     messageId: "noReassignLogCallbacks",
-                    type: "AssignmentExpression",
                 },
             ],
         },
@@ -83,7 +78,6 @@ ruleTester.run("no-reassign-log-callbacks", rule, {
             errors: [
                 {
                     messageId: "noReassignLogCallbacks",
-                    type: "AssignmentExpression",
                 },
             ],
         },
@@ -92,7 +86,6 @@ ruleTester.run("no-reassign-log-callbacks", rule, {
             errors: [
                 {
                     messageId: "noReassignLogCallbacks",
-                    type: "AssignmentExpression",
                 },
             ],
         },

@@ -42,7 +42,6 @@ ruleTester.run("no-early-return", rule, {
             errors: [
                 {
                     messageId: "noEarlyReturn",
-                    type: "ReturnStatement",
                 },
             ],
         },
@@ -54,7 +53,6 @@ ruleTester.run("no-early-return", rule, {
             errors: [
                 {
                     messageId: "noEarlyReturn",
-                    type: "ReturnStatement",
                 },
             ],
         },
@@ -64,7 +62,6 @@ ruleTester.run("no-early-return", rule, {
             errors: [
                 {
                     messageId: "noEarlyReturn",
-                    type: "ReturnStatement",
                 },
             ],
         },
@@ -75,7 +72,6 @@ ruleTester.run("no-early-return", rule, {
             errors: [
                 {
                     messageId: "noEarlyReturn",
-                    type: "ReturnStatement",
                 },
             ],
         },
@@ -84,7 +80,6 @@ ruleTester.run("no-early-return", rule, {
             errors: [
                 {
                     messageId: "noEarlyReturn",
-                    type: "ReturnStatement",
                 },
             ],
         },
@@ -95,13 +90,11 @@ ruleTester.run("no-early-return", rule, {
             errors: [
                 {
                     messageId: "noEarlyReturn",
-                    type: "ReturnStatement",
                     line: 1,
                     column: 67,
                 },
                 {
                     messageId: "noEarlyReturn",
-                    type: "ReturnStatement",
                     line: 1,
                     column: 99,
                 },

@@ -33,7 +33,6 @@ ruleTester.run("no-init", rule, {
             errors: [
                 {
                     messageId: "noInit",
-                    type: "CallExpression",
                 },
             ],
         },

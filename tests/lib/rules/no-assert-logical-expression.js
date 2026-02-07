@@ -64,7 +64,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 50,
                 },
@@ -80,7 +79,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 68,
                 },
@@ -94,7 +92,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 44,
                 },
@@ -108,7 +105,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 50,
                 },
@@ -122,7 +118,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 53,
                 },
@@ -136,7 +131,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 53,
                 },
@@ -150,7 +144,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 53,
                 },
@@ -159,7 +152,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 65,
                 },
@@ -173,7 +165,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 53,
                 },
@@ -182,7 +173,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 65,
                 },
@@ -198,7 +188,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 59,
                 },
@@ -207,7 +196,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 71,
                 },
@@ -223,7 +211,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 59,
                 },
@@ -232,7 +219,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 71,
                 },
@@ -248,7 +234,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 57,
                 },
@@ -257,7 +242,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 69,
                 },
@@ -273,7 +257,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 57,
                 },
@@ -282,7 +265,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 69,
                 },
@@ -298,7 +280,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 57,
                 },
@@ -307,7 +288,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 69,
                 },
@@ -323,7 +303,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 57,
                 },
@@ -332,7 +311,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 69,
                 },
@@ -348,7 +326,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 56,
                 },
@@ -357,7 +334,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 68,
                 },
@@ -373,7 +349,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 56,
                 },
@@ -382,7 +357,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 68,
                 },
@@ -398,7 +372,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 62,
                 },
@@ -407,7 +380,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 74,
                 },
@@ -423,7 +395,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 62,
                 },
@@ -432,7 +403,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 74,
                 },
@@ -448,7 +418,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 60,
                 },
@@ -457,7 +426,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 72,
                 },
@@ -473,7 +441,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 60,
                 },
@@ -482,7 +449,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 72,
                 },
@@ -498,7 +464,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 60,
                 },
@@ -507,7 +472,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 72,
                 },
@@ -523,7 +487,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 60,
                 },
@@ -532,7 +495,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "||",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 72,
                 },
@@ -548,7 +510,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 52,
                 },
@@ -562,7 +523,6 @@ ruleTester.run("no-assert-logical-expression", rule, {
                     data: {
                         operator: "&&",
                     },
-                    type: "LogicalExpression",
                     line: 1,
                     column: 53,
                 },
