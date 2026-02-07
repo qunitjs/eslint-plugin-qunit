@@ -27,7 +27,7 @@
     "dist/"
   ],
   "dependencies": {
-    "eslint-utils": "^3.0.0",
+    "@eslint-community/eslint-utils": "^4.4.0",
     "requireindex": "^1.2.0"
   },
   "devDependencies": {
