@@ -25,7 +25,6 @@ ruleTester.run("no-jsdump", rule, {
             errors: [
                 {
                     messageId: "noJsDump",
-                    type: "CallExpression",
                 },
             ],
         },

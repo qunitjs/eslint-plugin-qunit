@@ -26,7 +26,6 @@ function addErrors(testCase) {
             errors: [
                 {
                     messageId: "redundantComparison",
-                    type: "CallExpression",
                 },
             ],
         },

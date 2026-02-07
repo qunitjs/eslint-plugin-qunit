@@ -50,7 +50,6 @@ ruleTester.run("no-throws-string", rule, {
                     data: {
                         callee: "assert.throws",
                     },
-                    type: "CallExpression",
                 },
             ],
         },
@@ -64,7 +63,6 @@ ruleTester.run("no-throws-string", rule, {
                     data: {
                         callee: "assert.throws",
                     },
-                    type: "CallExpression",
                 },
             ],
         },
@@ -76,7 +74,6 @@ ruleTester.run("no-throws-string", rule, {
                     data: {
                         callee: "assert.throws",
                     },
-                    type: "CallExpression",
                 },
             ],
         },
@@ -88,7 +85,6 @@ ruleTester.run("no-throws-string", rule, {
                     data: {
                         callee: "assert.raises",
                     },
-                    type: "CallExpression",
                 },
             ],
         },
@@ -100,7 +96,6 @@ ruleTester.run("no-throws-string", rule, {
                     data: {
                         callee: "throws",
                     },
-                    type: "CallExpression",
                 },
             ],
         },

@@ -60,7 +60,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -72,7 +71,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -82,7 +80,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -92,7 +89,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -102,7 +98,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -112,7 +107,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -122,7 +116,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -132,7 +125,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -142,7 +134,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -154,7 +145,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -164,7 +154,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -174,7 +163,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -184,7 +172,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -194,7 +181,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -204,7 +190,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -214,7 +199,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -224,7 +208,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -236,7 +219,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -248,7 +230,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -260,7 +241,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -270,7 +250,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -280,7 +259,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -290,7 +268,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -300,7 +277,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -310,7 +286,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -320,7 +295,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },
@@ -330,7 +304,6 @@ ruleTester.run("no-arrow-tests", rule, {
             errors: [
                 {
                     messageId: "noArrowFunction",
-                    type: "ArrowFunctionExpression",
                 },
             ],
         },

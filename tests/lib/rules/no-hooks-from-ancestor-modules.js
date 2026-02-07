@@ -26,7 +26,6 @@ function createError({ invokedMethodName, usedHooksIdentifierName }) {
             invokedMethodName,
             usedHooksIdentifierName,
         },
-        type: "MemberExpression",
     };
 }
 

@@ -29,7 +29,6 @@ ruleTester.run("no-async-test", rule, {
             errors: [
                 {
                     messageId: "unexpectedAsyncTest",
-                    type: "CallExpression",
                 },
             ],
         },
@@ -38,7 +37,6 @@ ruleTester.run("no-async-test", rule, {
             errors: [
                 {
                     messageId: "unexpectedAsyncTest",
-                    type: "CallExpression",
                 },
             ],
         },

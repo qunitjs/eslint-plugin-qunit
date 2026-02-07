@@ -26,7 +26,6 @@ function wrapInInvalidTestObject(code) {
         errors: [
             {
                 messageId: "noAssertionInsideConditional",
-                type: "CallExpression",
             },
         ],
     };

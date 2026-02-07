@@ -25,7 +25,6 @@ ruleTester.run("no-qunit-stop", rule, {
             errors: [
                 {
                     messageId: "noQUnitStop",
-                    type: "CallExpression",
                 },
             ],
         },
@@ -34,7 +33,6 @@ ruleTester.run("no-qunit-stop", rule, {
             errors: [
                 {
                     messageId: "noQUnitStop",
-                    type: "CallExpression",
                 },
             ],
         },
