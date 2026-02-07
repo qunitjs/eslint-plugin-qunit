@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-qunit",
-  "version": "8.2.5",
+  "version": "8.2.6",
   "description": "ESLint plugin containing rules useful for QUnit tests.",
   "exports": {
     ".": "./dist/index.js",
