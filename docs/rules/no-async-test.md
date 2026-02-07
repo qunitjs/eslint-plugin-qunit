@@ -1,4 +1,6 @@
-# Disallow the use of asyncTest or QUnit.asyncTest (`qunit/no-async-test`)
+# qunit/no-async-test
+
+📝 Disallow the use of asyncTest or QUnit.asyncTest.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 

@@ -1,4 +1,6 @@
-# Enforce that `expect` is called (`qunit/require-expect`)
+# qunit/require-expect
+
+📝 Enforce that `expect` is called.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 

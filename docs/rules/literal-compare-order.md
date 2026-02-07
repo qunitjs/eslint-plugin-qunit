@@ -1,4 +1,6 @@
-# Enforce comparison assertions have arguments in the right order (`qunit/literal-compare-order`)
+# qunit/literal-compare-order
+
+📝 Enforce comparison assertions have arguments in the right order.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 

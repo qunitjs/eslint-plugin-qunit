@@ -1,4 +1,6 @@
-# Disallow the use of assert.equal (`qunit/no-assert-equal`)
+# qunit/no-assert-equal
+
+📝 Disallow the use of assert.equal.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 

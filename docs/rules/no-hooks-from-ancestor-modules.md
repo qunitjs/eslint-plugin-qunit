@@ -1,4 +1,6 @@
-# Disallow the use of hooks from ancestor modules (`qunit/no-hooks-from-ancestor-modules`)
+# qunit/no-hooks-from-ancestor-modules
+
+📝 Disallow the use of hooks from ancestor modules.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 

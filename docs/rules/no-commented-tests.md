@@ -1,4 +1,6 @@
-# Disallow commented tests (`qunit/no-commented-tests`)
+# qunit/no-commented-tests
+
+📝 Disallow commented tests.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 

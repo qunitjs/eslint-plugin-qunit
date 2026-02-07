@@ -1,4 +1,6 @@
-# Disallow setup/teardown module hooks (`qunit/no-setup-teardown`)
+# qunit/no-setup-teardown
+
+📝 Disallow setup/teardown module hooks.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 

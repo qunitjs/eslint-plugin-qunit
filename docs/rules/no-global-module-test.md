@@ -1,4 +1,6 @@
-# Disallow global module/test/asyncTest (`qunit/no-global-module-test`)
+# qunit/no-global-module-test
+
+📝 Disallow global module/test/asyncTest.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 

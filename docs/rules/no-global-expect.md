@@ -1,4 +1,6 @@
-# Disallow global expect (`qunit/no-global-expect`)
+# qunit/no-global-expect
+
+📝 Disallow global expect.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 

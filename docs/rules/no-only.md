@@ -1,4 +1,6 @@
-# Disallow QUnit.only (`qunit/no-only`)
+# qunit/no-only
+
+📝 Disallow QUnit.only.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 
