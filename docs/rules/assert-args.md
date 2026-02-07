@@ -1,4 +1,6 @@
-# Enforce that the correct number of assert arguments are used (`qunit/assert-args`)
+# qunit/assert-args
+
+📝 Enforce that the correct number of assert arguments are used.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 

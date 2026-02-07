@@ -1,4 +1,6 @@
-# Disallow nested QUnit.test() calls (`qunit/no-nested-tests`)
+# qunit/no-nested-tests
+
+📝 Disallow nested QUnit.test() calls.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 

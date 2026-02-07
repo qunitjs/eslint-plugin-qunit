@@ -1,4 +1,6 @@
-# Disallow comparing relational expressions to booleans in assertions (`qunit/no-compare-relation-boolean`)
+# qunit/no-compare-relation-boolean
+
+📝 Disallow comparing relational expressions to booleans in assertions.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 

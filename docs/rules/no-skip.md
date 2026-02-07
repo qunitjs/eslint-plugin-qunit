@@ -1,4 +1,6 @@
-# Disallow QUnit.skip (`qunit/no-skip`)
+# qunit/no-skip
+
+📝 Disallow QUnit.skip.
 
 <!-- end auto-generated rule header -->
 

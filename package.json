@@ -21,7 +21,7 @@
     "release": "release-it",
     "test": "npm-run-all lint test:unit",
     "test:unit": "nyc mocha tests/**/*.js",
-    "update:eslint-docs": "eslint-doc-generator --url-configs \"https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations\""
+    "update:eslint-docs": "eslint-doc-generator"
   },
   "files": [
     "dist/"
@@ -49,7 +49,7 @@
     "coveralls": "^3.1.1",
     "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.5",
-    "eslint-doc-generator": "^2.2.2",
+    "eslint-doc-generator": "^3.0.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-eslint-plugin": "^7.0.0",
     "eslint-plugin-markdown": "^5.1.0",

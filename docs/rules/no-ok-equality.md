@@ -1,4 +1,6 @@
-# Disallow equality comparisons in assert.ok/assert.notOk (`qunit/no-ok-equality`)
+# qunit/no-ok-equality
+
+📝 Disallow equality comparisons in assert.ok/assert.notOk.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 

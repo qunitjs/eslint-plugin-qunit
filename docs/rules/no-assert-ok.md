@@ -1,4 +1,6 @@
-# Disallow the use of assert.ok/assert.notOk (`qunit/no-assert-ok`)
+# qunit/no-assert-ok
+
+📝 Disallow the use of assert.ok/assert.notOk.
 
 <!-- end auto-generated rule header -->
 

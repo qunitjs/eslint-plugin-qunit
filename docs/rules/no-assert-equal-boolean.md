@@ -1,4 +1,6 @@
-# Require use of boolean assertions (`qunit/no-assert-equal-boolean`)
+# qunit/no-assert-equal-boolean
+
+📝 Require use of boolean assertions.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 

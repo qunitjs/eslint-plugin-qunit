@@ -1,4 +1,6 @@
-# Disallow negation in assert.ok/assert.notOk (`qunit/no-negated-ok`)
+# qunit/no-negated-ok
+
+📝 Disallow negation in assert.ok/assert.notOk.
 
 💼 This rule is enabled in the ✅ `recommended` [config](https://github.com/platinumazure/eslint-plugin-qunit/blob/main/README.md#configurations).
 
