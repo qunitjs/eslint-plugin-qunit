@@ -1,23 +1,23 @@
 # Changelog
 
-## [8.2.6](https://github.com/bmish/eslint-plugin-qunit/compare/v8.2.5...v8.2.6) (2026-02-07)
+## [8.2.6](https://github.com/qunitjs/eslint-plugin-qunit/compare/v8.2.5...v8.2.6) (2026-02-07)
 
 ### Bug Fixes
 
-* add context.sourceCode fallback for ESLint 10 compatibility ([#659](https://github.com/bmish/eslint-plugin-qunit/issues/659)) ([937ddec](https://github.com/bmish/eslint-plugin-qunit/commit/937ddecb37542440d337e49de502ecff7fa89a08))
-* switch to @eslint-community/eslint-utils ([#660](https://github.com/bmish/eslint-plugin-qunit/issues/660)) ([6031514](https://github.com/bmish/eslint-plugin-qunit/commit/603151454d61ba5fe3546aa911dc90297d2d9d77))
-* typo in `peerDependencies` in package.json ([#658](https://github.com/bmish/eslint-plugin-qunit/issues/658)) ([83cef82](https://github.com/bmish/eslint-plugin-qunit/commit/83cef827d86c38d47a7bdea020614cb9b0f4b224))
+* add context.sourceCode fallback for ESLint 10 compatibility ([#659](https://github.com/qunitjs/eslint-plugin-qunit/issues/659)) ([937ddec](https://github.com/qunitjs/eslint-plugin-qunit/commit/937ddecb37542440d337e49de502ecff7fa89a08))
+* switch to @eslint-community/eslint-utils ([#660](https://github.com/qunitjs/eslint-plugin-qunit/issues/660)) ([6031514](https://github.com/qunitjs/eslint-plugin-qunit/commit/603151454d61ba5fe3546aa911dc90297d2d9d77))
+* typo in `peerDependencies` in package.json ([#658](https://github.com/qunitjs/eslint-plugin-qunit/issues/658)) ([83cef82](https://github.com/qunitjs/eslint-plugin-qunit/commit/83cef827d86c38d47a7bdea020614cb9b0f4b224))
 
 ### Documentation
 
-* update all-contributors in readme ([#617](https://github.com/bmish/eslint-plugin-qunit/issues/617)) ([c0002a1](https://github.com/bmish/eslint-plugin-qunit/commit/c0002a1df821e4bea887f2418b4d4c68286a547f))
-* update eslint-doc-generator to v3 ([#657](https://github.com/bmish/eslint-plugin-qunit/issues/657)) ([12554e5](https://github.com/bmish/eslint-plugin-qunit/commit/12554e50c7118e08ebd486a81b4ede4aef13daac))
+* update all-contributors in readme ([#617](https://github.com/qunitjs/eslint-plugin-qunit/issues/617)) ([c0002a1](https://github.com/qunitjs/eslint-plugin-qunit/commit/c0002a1df821e4bea887f2418b4d4c68286a547f))
+* update eslint-doc-generator to v3 ([#657](https://github.com/qunitjs/eslint-plugin-qunit/issues/657)) ([12554e5](https://github.com/qunitjs/eslint-plugin-qunit/commit/12554e50c7118e08ebd486a81b4ede4aef13daac))
 
 ### Chores
 
-* lockfile diff ([#664](https://github.com/bmish/eslint-plugin-qunit/issues/664)) ([1baf99c](https://github.com/bmish/eslint-plugin-qunit/commit/1baf99c8a66acb4a4dd6e60146dbcfd82d49b2e2))
-* test under ESLint v10 ([#663](https://github.com/bmish/eslint-plugin-qunit/issues/663)) ([4613e82](https://github.com/bmish/eslint-plugin-qunit/commit/4613e8286aee2177dc2884de30a72e1735b35599))
-* update to eslint-plugin-eslint-plugin v7 ([#620](https://github.com/bmish/eslint-plugin-qunit/issues/620)) ([ee52056](https://github.com/bmish/eslint-plugin-qunit/commit/ee520567976415cf3996602d64a614cfe28baeb2))
+* lockfile diff ([#664](https://github.com/qunitjs/eslint-plugin-qunit/issues/664)) ([1baf99c](https://github.com/qunitjs/eslint-plugin-qunit/commit/1baf99c8a66acb4a4dd6e60146dbcfd82d49b2e2))
+* test under ESLint v10 ([#663](https://github.com/qunitjs/eslint-plugin-qunit/issues/663)) ([4613e82](https://github.com/qunitjs/eslint-plugin-qunit/commit/4613e8286aee2177dc2884de30a72e1735b35599))
+* update to eslint-plugin-eslint-plugin v7 ([#620](https://github.com/qunitjs/eslint-plugin-qunit/issues/620)) ([ee52056](https://github.com/qunitjs/eslint-plugin-qunit/commit/ee520567976415cf3996602d64a614cfe28baeb2))
 
 ## [8.2.5](https://github.com/platinumazure/eslint-plugin-qunit/compare/v8.2.4...v8.2.5) (2025-07-27)
 
