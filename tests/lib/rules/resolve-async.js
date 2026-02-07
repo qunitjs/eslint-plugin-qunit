@@ -311,9 +311,7 @@ ruleTester.run("resolve-async", rule, {
         // Multiple assert.async() calls
         {
             code: "test('name', function (assert) { var done1 = assert.async(), done2 = assert.async(); done1(); });",
-            errors: [
-                createAsyncCallbackNotCalledMessage("done2"),
-            ],
+            errors: [createAsyncCallbackNotCalledMessage("done2")],
         },
         {
             code: "test('name', function (assert) { var done1 = assert.async(), done2 = assert.async(); });",
@@ -324,9 +322,7 @@ ruleTester.run("resolve-async", rule, {
         },
         {
             code: "QUnit.test('name', function (assert) { var done1 = assert.async(), done2 = assert.async(); done1(); });",
-            errors: [
-                createAsyncCallbackNotCalledMessage("done2"),
-            ],
+            errors: [createAsyncCallbackNotCalledMessage("done2")],
         },
         {
             code: "QUnit.test('name', function (assert) { var done1 = assert.async(), done2 = assert.async(); });",
@@ -337,9 +333,7 @@ ruleTester.run("resolve-async", rule, {
         },
         {
             code: "test('name', function (assert) { var done1, done2; done1 = assert.async(); done2 = assert.async(); done1(); });",
-            errors: [
-                createAsyncCallbackNotCalledMessage("done2"),
-            ],
+            errors: [createAsyncCallbackNotCalledMessage("done2")],
         },
         {
             code: "test('name', function (assert) { var done1, done2; done1 = assert.async(); done2 = assert.async(); });",
@@ -350,9 +344,7 @@ ruleTester.run("resolve-async", rule, {
         },
         {
             code: "QUnit.test('name', function (assert) { var done1, done2; done1 = assert.async(); done2 = assert.async(); done1(); });",
-            errors: [
-                createAsyncCallbackNotCalledMessage("done2"),
-            ],
+            errors: [createAsyncCallbackNotCalledMessage("done2")],
         },
         {
             code: "QUnit.test('name', function (assert) { var done1, done2; done1 = assert.async(); done2 = assert.async(); });",
@@ -453,15 +445,11 @@ ruleTester.run("resolve-async", rule, {
         // assert.async callback can be invoked via .call/.apply
         {
             code: "QUnit.test('name', function (assert) { var done1 = assert.async(), done2 = assert.async(); done1.call(); });",
-            errors: [
-                createAsyncCallbackNotCalledMessage("done2"),
-            ],
+            errors: [createAsyncCallbackNotCalledMessage("done2")],
         },
         {
             code: "QUnit.test('name', function (assert) { var done1 = assert.async(), done2 = assert.async(); done1.apply(); });",
-            errors: [
-                createAsyncCallbackNotCalledMessage("done2"),
-            ],
+            errors: [createAsyncCallbackNotCalledMessage("done2")],
         },
 
         // start/stop calls outside of test context should not affect count
@@ -489,9 +477,7 @@ ruleTester.run("resolve-async", rule, {
         },
         {
             code: "var done1 = assert.async(); QUnit.test('name', function (assert) { var done2 = assert.async(); done1(); });",
-            errors: [
-                createAsyncCallbackNotCalledMessage("done2"),
-            ],
+            errors: [createAsyncCallbackNotCalledMessage("done2")],
         },
 
         // async calls can be done using a different variable
