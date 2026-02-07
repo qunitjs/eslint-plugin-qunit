@@ -33,7 +33,7 @@
   "devDependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
     "@eslint/js": "^9.29.0",
-    "@release-it/conventional-changelog": "^8.0.1",
+    "@release-it/conventional-changelog": "^10.0.5",
     "@types/chai": "^5.2.2",
     "@types/eslint": "^9.6.1",
     "@types/eslint-plugin-markdown": "^2.0.2",
@@ -67,7 +67,7 @@
     "nyc": "^17.1.0",
     "outdent": "^0.8.0",
     "prettier": "^3.1.0",
-    "release-it": "^17.1.1",
+    "release-it": "^19.2.4",
     "semver": "^7.5.4",
     "typescript": "^5.8.3"
   },
