@@ -176,6 +176,26 @@ ruleTester.run("no-arrow-tests", rule, {
             ],
         },
         {
+            code: "QUnit.module('module', { before: () => {} });",
+            output: "QUnit.module('module', { before: function() {} });",
+            errors: [
+                {
+                    messageId: "noArrowFunction",
+                    type: "ArrowFunctionExpression",
+                },
+            ],
+        },
+        {
+            code: "QUnit.module('module', { after: () => {} });",
+            output: "QUnit.module('module', { after: function() {} });",
+            errors: [
+                {
+                    messageId: "noArrowFunction",
+                    type: "ArrowFunctionExpression",
+                },
+            ],
+        },
+        {
             code: "module('module', { setup: () => {} });",
             output: "module('module', { setup: function() {} });",
             errors: [
