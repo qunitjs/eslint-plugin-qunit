@@ -4,7 +4,7 @@
   "description": "ESLint plugin containing rules useful for QUnit tests.",
   "exports": {
     ".": "./dist/index.js",
-    "./configs/*": "./dist/lib/configs/*.js"
+    "./configs/*": "./dist/configs/*.js"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
