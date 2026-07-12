@@ -204,6 +204,6 @@ module.exports = [
         },
     },
     {
-        ignores: ["dist/**/*"],
+        ignores: ["dist/**/*", "scripts/**/*"],
     },
 ];
