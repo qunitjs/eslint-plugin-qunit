@@ -27,8 +27,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@eslint-community/eslint-utils": "^4.4.0",
-    "requireindex": "^1.2.0"
+    "@eslint-community/eslint-utils": "^4.4.0"
   },
   "devDependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
@@ -42,7 +41,6 @@
     "@types/estree": "^1.0.8",
     "@types/mocha": "^10.0.10",
     "@types/node": "^24.0.3",
-    "@types/requireindex": "^1.2.4",
     "@typescript-eslint/parser": "^8.54.0",
     "all-contributors-cli": "^6.26.1",
     "chai": "^4.3.10",
