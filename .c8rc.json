@@ -1,0 +1,18 @@
+{
+  "check-coverage": true,
+  "lines": 92,
+  "statements": 92,
+  "functions": 100,
+  "branches": 90,
+  "exclude": [
+    "build/**",
+    "dist/**",
+    "eslint-remote-tester.config.js",
+    "eslint.config.js",
+    "scripts/**",
+    "tests/**"
+  ],
+  "reporter": ["lcovonly"],
+  "all": true,
+  "report-dir": "./build/coverage"
+}
