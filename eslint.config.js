@@ -13,6 +13,7 @@ const eslintPluginN = require("eslint-plugin-n");
 const eslintPluginPrettierRecommended = require("eslint-plugin-prettier/recommended");
 const { default: eslintPluginUnicorn } = require("eslint-plugin-unicorn");
 const globals = require("globals");
+const typescriptEslintParser = require("@typescript-eslint/parser");
 
 module.exports = [
     js.configs.recommended,
@@ -184,7 +185,13 @@ module.exports = [
     },
     {
         // Markdown code samples.
-        files: ["**/*.md/*.js", "**/*.md/*.javascript"],
+        files: [
+            "**/*.md/*.js",
+            "**/*.md/*.javascript",
+            "**/*.md/*.ts",
+            "**/*.md/*.cts",
+            "**/*.md/*.mts",
+        ],
         rules: {
             eqeqeq: "off",
             "guard-for-in": "off",
@@ -203,6 +210,20 @@ module.exports = [
         files: ["**/*.mjs"],
         languageOptions: {
             sourceType: "module",
+        },
+    },
+    {
+        // Future CJS-emitting TypeScript sources (issue #596). Parser only —
+        // typed lint rules can be layered on once files exist.
+        files: ["**/*.ts", "**/*.cts"],
+        languageOptions: {
+            parser: typescriptEslintParser,
+            sourceType: "script",
+            parserOptions: {
+                // Keep in sync with tsconfig module/target; no project service
+                // yet so lint stays fast and works before files are converted.
+                ecmaVersion: "latest",
+            },
         },
     },
     {

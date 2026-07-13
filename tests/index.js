@@ -19,17 +19,45 @@ const assert = require("node:assert/strict"),
 // Tests
 //------------------------------------------------------------------------------
 
+/**
+ * @param {string} fileName
+ * @returns {boolean}
+ */
+function isSourceFile(fileName) {
+    return /\.[cm]?[jt]s$/.test(fileName);
+}
+
+/**
+ * @param {string} fileName
+ * @returns {string}
+ */
+function sourceBasename(fileName) {
+    return path.basename(fileName, path.extname(fileName));
+}
+
+/**
+ * @param {string} dir
+ * @param {string} baseName
+ * @returns {string | undefined}
+ */
+function findSourceFile(dir, baseName) {
+    return [".js", ".ts", ".cjs", ".cts", ".mjs", ".mts"]
+        .map((ext) => path.join(dir, `${baseName}${ext}`))
+        .find((candidate) => fs.existsSync(candidate));
+}
+
 const ruleNames = fs
     .readdirSync("./lib/rules")
-    .map((rawFileName) => path.basename(rawFileName, ".js"));
+    .filter((fileName) => isSourceFile(fileName))
+    .map((fileName) => sourceBasename(fileName));
 
 const configDir = path.join(__dirname, "../lib/configs");
 const flatConfigs = Object.fromEntries(
     fs
         .readdirSync(configDir)
-        .filter((fileName) => fileName.endsWith(".js"))
+        .filter((fileName) => isSourceFile(fileName))
         .map((fileName) => [
-            path.basename(fileName, ".js"),
+            sourceBasename(fileName),
             require(path.join(configDir, fileName)),
         ]),
 );
@@ -49,22 +77,17 @@ describe("index.js", function () {
                     );
                 });
 
-                it("should appear in tests", function (done) {
-                    const path = `./tests/lib/rules/${ruleName}.js`;
-
-                    fs.access(path, function (err) {
-                        assert.ok(
-                            !err,
-                            `tests/lib/rules/${ruleName}.js should exist`,
-                        );
-                        done();
-                    });
+                it("should appear in tests", function () {
+                    assert.ok(
+                        findSourceFile("./tests/lib/rules", ruleName),
+                        `tests/lib/rules/${ruleName}.{js,ts} should exist`,
+                    );
                 });
 
                 it("should appear in docs", function (done) {
-                    const path = `./docs/rules/${ruleName}.md`;
+                    const docPath = `./docs/rules/${ruleName}.md`;
 
-                    fs.access(path, function (err) {
+                    fs.access(docPath, function (err) {
                         assert.ok(
                             !err,
                             `docs/rules/${ruleName}.md should exist`,
@@ -74,14 +97,24 @@ describe("index.js", function () {
                 });
 
                 it("should have the right rule contents", function () {
-                    const path = `./lib/rules/${ruleName}.js`;
-                    const fileContents = fs.readFileSync(path, "utf8");
+                    const rulePath = findSourceFile("./lib/rules", ruleName);
+                    assert.ok(rulePath, `lib/rules/${ruleName} should exist`);
+                    const fileContents = fs.readFileSync(rulePath, "utf8");
 
                     assert.ok(
                         fileContents.includes(
                             "/** @type {import('eslint').Rule.RuleModule} */",
-                        ),
-                        "includes jsdoc comment for rule type",
+                        ) ||
+                            fileContents.includes(
+                                "satisfies Rule.RuleModule",
+                            ) ||
+                            fileContents.includes(
+                                'satisfies import("eslint").Rule.RuleModule',
+                            ) ||
+                            fileContents.includes(
+                                "satisfies import('eslint').Rule.RuleModule",
+                            ),
+                        "includes Rule.RuleModule type annotation (JSDoc or satisfies)",
                     );
                 });
             });
