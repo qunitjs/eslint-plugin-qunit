@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const assert = require("chai").assert,
+const assert = require("node:assert/strict"),
     { rules, configs } = require("../index"),
     fs = require("node:fs"),
     path = require("node:path"),
@@ -29,9 +29,8 @@ describe("index.js", function () {
         for (const ruleName of ruleNames) {
             describe(ruleName, function () {
                 it("should appear in rule exports", function () {
-                    assert.property(
-                        rules,
-                        ruleName,
+                    assert.ok(
+                        ruleName in rules,
                         `Rule export for ${ruleName} not present`,
                     );
                 });
@@ -40,8 +39,8 @@ describe("index.js", function () {
                     const path = `./tests/lib/rules/${ruleName}.js`;
 
                     fs.access(path, function (err) {
-                        assert.notOk(
-                            err,
+                        assert.ok(
+                            !err,
                             `tests/lib/rules/${ruleName}.js should exist`,
                         );
                         done();
@@ -52,8 +51,8 @@ describe("index.js", function () {
                     const path = `./docs/rules/${ruleName}.md`;
 
                     fs.access(path, function (err) {
-                        assert.notOk(
-                            err,
+                        assert.ok(
+                            !err,
                             `docs/rules/${ruleName}.md should exist`,
                         );
                         done();
