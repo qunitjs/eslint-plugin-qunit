@@ -2,6 +2,7 @@
   "extends": "./tsconfig.json",
   "exclude": [
     "tests/**",
-    "eslint.config.js"
+    "eslint.config.js",
+    "types/**"
   ]
 }
