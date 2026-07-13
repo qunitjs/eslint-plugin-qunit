@@ -171,12 +171,8 @@ module.exports = [
             "unicorn/empty-brace-spaces": "off",
             "unicorn/filename-case": "off",
             "unicorn/no-array-reduce": "off",
-            // TODO: enable once engines floor is Node 20+ (Array#toSorted / toReversed).
-            "unicorn/no-array-reverse": "off",
-            "unicorn/no-array-sort": "off",
             "unicorn/no-null": "off",
-            // TODO: enable once engines floor is Node 18+ (Array#findLast).
-            "unicorn/prefer-array-last-methods": "off",
+            "unicorn/prefer-at": "off", // TODO: enable once we raise Node requirement to v16.6.0
             "unicorn/prefer-module": "off",
             "unicorn/prevent-abbreviations": "off",
         },
@@ -201,7 +197,6 @@ module.exports = [
             strict: "off",
             // Doc examples intentionally show QUnit APIs / anti-patterns.
             "unicorn/no-instanceof-builtins": "off",
-            "unicorn/no-this-outside-of-class": "off",
         },
     },
     {
