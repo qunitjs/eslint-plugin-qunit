@@ -11,7 +11,7 @@ const eslintPluginMarkdown = require("eslint-plugin-markdown");
 const eslintPluginMocha = require("eslint-plugin-mocha");
 const eslintPluginN = require("eslint-plugin-n");
 const eslintPluginPrettierRecommended = require("eslint-plugin-prettier/recommended");
-const eslintPluginUnicorn = require("eslint-plugin-unicorn");
+const { default: eslintPluginUnicorn } = require("eslint-plugin-unicorn");
 const globals = require("globals");
 
 module.exports = [
@@ -21,7 +21,7 @@ module.exports = [
     eslintPluginEslintPlugin.configs.all,
     eslintPluginN.configs["flat/recommended"],
     eslintPluginPrettierRecommended,
-    eslintPluginUnicorn.configs["flat/recommended"],
+    eslintPluginUnicorn.configs.recommended,
 
     {
         ...eslintPluginMocha.configs.flat.recommended,
@@ -171,8 +171,12 @@ module.exports = [
             "unicorn/empty-brace-spaces": "off",
             "unicorn/filename-case": "off",
             "unicorn/no-array-reduce": "off",
+            // TODO: enable once engines floor is Node 20+ (Array#toSorted / toReversed).
+            "unicorn/no-array-reverse": "off",
+            "unicorn/no-array-sort": "off",
             "unicorn/no-null": "off",
-            "unicorn/prefer-at": "off", // TODO: enable once we raise Node requirement to v16.6.0
+            // TODO: enable once engines floor is Node 18+ (Array#findLast).
+            "unicorn/prefer-array-last-methods": "off",
             "unicorn/prefer-module": "off",
             "unicorn/prevent-abbreviations": "off",
         },
@@ -195,6 +199,9 @@ module.exports = [
             "no-unused-vars": "off",
             "no-var": "off",
             strict: "off",
+            // Doc examples intentionally show QUnit APIs / anti-patterns.
+            "unicorn/no-instanceof-builtins": "off",
+            "unicorn/no-this-outside-of-class": "off",
         },
     },
     {
