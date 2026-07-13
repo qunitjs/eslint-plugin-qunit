@@ -17,10 +17,10 @@
     "lint:remote": "eslint-remote-tester --config eslint-remote-tester.config.mjs",
     "lint:types": "tsc --noEmit",
     "preversion": "npm test",
-    "report-coverage-html": "nyc report --reporter=html --report-dir build/coverage",
+    "report-coverage-html": "c8 report --reporter=html --report-dir build/coverage",
     "release": "release-it",
     "test": "npm-run-all lint test:unit",
-    "test:unit": "nyc mocha tests/**/*.js",
+    "test:unit": "c8 mocha tests/**/*.js",
     "update:eslint-docs": "eslint-doc-generator"
   },
   "files": [
@@ -42,6 +42,7 @@
     "@types/node": "^24.0.3",
     "@typescript-eslint/parser": "^8.54.0",
     "all-contributors-cli": "^6.26.1",
+    "c8": "^10.1.3",
     "coveralls": "^3.1.1",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.5",
@@ -60,7 +61,6 @@
     "mocha": "^11.7.1",
     "mocha-lcov-reporter": "^1.3.0",
     "npm-run-all2": "^8.0.4",
-    "nyc": "^17.1.0",
     "outdent": "^0.8.0",
     "prettier": "^3.1.0",
     "release-it": "^19.2.4",
@@ -79,26 +79,6 @@
     "eslintplugin",
     "eslint-plugin"
   ],
-  "nyc": {
-    "check-coverage": true,
-    "lines": 92,
-    "statements": 92,
-    "functions": 100,
-    "branches": 90,
-    "exclude": [
-      "build/**",
-      "dist/**",
-      "eslint-remote-tester.config.js",
-      "eslint.config.js",
-      "scripts/**",
-      "tests/**"
-    ],
-    "reporter": [
-      "lcovonly"
-    ],
-    "all": true,
-    "report-dir": "./build/coverage"
-  },
   "author": "Kevin Partington <kevin@kernelpanicstudios.com>",
   "license": "MIT",
   "bugs": {
