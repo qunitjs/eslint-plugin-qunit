@@ -12,7 +12,6 @@ const assert = require("node:assert/strict"),
     { rules, configs } = require("../index"),
     fs = require("node:fs"),
     path = require("node:path"),
-    requireIndex = require("requireindex"),
     plugin = require("../index.js"),
     recommendedFlatConfig = require("../lib/configs/recommended.js");
 
@@ -24,8 +23,23 @@ const ruleNames = fs
     .readdirSync("./lib/rules")
     .map((rawFileName) => path.basename(rawFileName, ".js"));
 
+const configDir = path.join(__dirname, "../lib/configs");
+const flatConfigs = Object.fromEntries(
+    fs
+        .readdirSync(configDir)
+        .filter((fileName) => fileName.endsWith(".js"))
+        .map((fileName) => [
+            path.basename(fileName, ".js"),
+            require(path.join(configDir, fileName)),
+        ]),
+);
+
 describe("index.js", function () {
     describe("rules", function () {
+        it("should export every rule file on disk and no extras", function () {
+            assert.strictEqual(Object.keys(rules).length, ruleNames.length);
+        });
+
         for (const ruleName of ruleNames) {
             describe(ruleName, function () {
                 it("should appear in rule exports", function () {
@@ -87,11 +101,10 @@ describe("index.js", function () {
         });
 
         describe("flat", function () {
-            describe("load all flat configs via requireIndex", function () {
+            describe("load all flat configs", function () {
                 // eslint-disable-next-line mocha/no-setup-in-describe -- rule doesn't like function calls like `Object.entries()`
                 for (const [configName, config] of Object.entries(
-                    // eslint-disable-next-line mocha/no-setup-in-describe -- rule doesn't like function calls like `Object.entries()`
-                    requireIndex(`${__dirname}/../lib/configs`),
+                    flatConfigs,
                 )) {
                     describe(configName, function () {
                         it("has the right plugins", function () {
