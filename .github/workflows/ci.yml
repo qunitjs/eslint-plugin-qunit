@@ -55,6 +55,20 @@ jobs:
       - run: npm ci
       - run: npm run lint
 
+  # Flat-config RuleTester languageOptions break under ESLint 8, so exercise the
+  # declared peer minimum with a legacy eslintrc-style smoke instead of mocha.
+  min-peer-eslint8:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "20.x"
+      - run: npm ci
+      - run: npm run build
+      - run: npm install --no-save --force eslint@8.38.0
+      - run: node scripts/smoke-eslint8.js
+
   finish-coveralls:
     needs: build
     runs-on: ubuntu-latest
