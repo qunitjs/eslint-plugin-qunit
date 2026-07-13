@@ -3,14 +3,8 @@
   "version": "8.2.6",
   "description": "ESLint plugin containing rules useful for QUnit tests.",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    },
-    "./configs/*": {
-      "types": "./dist/lib/configs/*.d.ts",
-      "default": "./dist/lib/configs/*.js"
-    },
+    ".": "./dist/index.js",
+    "./configs/*": "./dist/lib/configs/*.js",
     "./package.json": "./package.json"
   },
   "main": "./dist/index.js",
