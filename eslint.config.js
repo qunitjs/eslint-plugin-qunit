@@ -11,7 +11,7 @@ const eslintPluginMarkdown = require("eslint-plugin-markdown");
 const eslintPluginMocha = require("eslint-plugin-mocha");
 const eslintPluginN = require("eslint-plugin-n");
 const eslintPluginPrettierRecommended = require("eslint-plugin-prettier/recommended");
-const eslintPluginUnicorn = require("eslint-plugin-unicorn");
+const { default: eslintPluginUnicorn } = require("eslint-plugin-unicorn");
 const globals = require("globals");
 
 module.exports = [
@@ -21,7 +21,7 @@ module.exports = [
     eslintPluginEslintPlugin.configs.all,
     eslintPluginN.configs["flat/recommended"],
     eslintPluginPrettierRecommended,
-    eslintPluginUnicorn.configs["flat/recommended"],
+    eslintPluginUnicorn.configs.recommended,
 
     {
         ...eslintPluginMocha.configs.flat.recommended,
@@ -195,6 +195,8 @@ module.exports = [
             "no-unused-vars": "off",
             "no-var": "off",
             strict: "off",
+            // Doc examples intentionally show QUnit APIs / anti-patterns.
+            "unicorn/no-instanceof-builtins": "off",
         },
     },
     {
