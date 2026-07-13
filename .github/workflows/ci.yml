@@ -24,7 +24,7 @@ jobs:
       matrix:
         os: [ ubuntu, windows ]
         # TODO: We still support Node 16 but can't run ESLint v9 tests with it anymore.
-        node-version: [18.x, 20.x]
+        node-version: [18.x, 20.x, 22.x, 24.x]
 
     steps:
     - uses: actions/checkout@v5
@@ -33,12 +33,13 @@ jobs:
       uses: actions/setup-node@v6
       with:
         node-version: ${{ matrix.node-version }}
+        cache: npm
 
     - run: npm ci
     - run: npm run test:unit
 
     - name: Test with ESLint v10
-      if: matrix.node-version == '20.x'
+      if: matrix.node-version == '22.x'
       run: npm install --save-dev eslint@10 && npm run test:unit
 
     - name: Coveralls
@@ -55,6 +56,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: "20.x"
+          cache: npm
       - run: npm ci
       - run: npm run lint
 
