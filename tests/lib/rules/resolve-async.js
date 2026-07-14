@@ -192,12 +192,20 @@ ruleTester.run("resolve-async", rule, {
             errors: [createNeedStartCallsMessage()],
         },
         {
+            code: "QUnit.module('name', { before: function () { QUnit.stop(); } });",
+            errors: [createNeedStartCallsMessage("Property")],
+        },
+        {
             code: "QUnit.module('name', { beforeEach: function () { QUnit.stop(); } });",
             errors: [createNeedStartCallsMessage()],
         },
         {
             code: "QUnit.module('name', { afterEach: function () { QUnit.stop(); } });",
             errors: [createNeedStartCallsMessage()],
+        },
+        {
+            code: "QUnit.module('name', { after: function () { QUnit.stop(); } });",
+            errors: [createNeedStartCallsMessage("Property")],
         },
 
         // Multiple start() calls needed
